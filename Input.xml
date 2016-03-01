@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<CSP>
+	<Vars>
+		<WA>
+			<Color>
+			</Color>
+		</WA>
+		<NT>
+			<Color>
+			</Color>
+		</NT>
+			<Color>
+			</Color>
+		<Q>
+			<Color>
+			</Color>
+		</Q>
+		<SA>
+			<Color>
+			</Color>
+		</SA>
+		<NSW>
+			<Color>
+			</Color>
+		</NSW>
+		<V>
+			<Color>
+			</Color>
+		</V>
+		<T>
+			<Color>
+			</Color>
+		</T>
+	</Vars>
+	<Domains>
+	
+	</Domains>
+	<Constraints>
+	<Constraints>
+</CSP>
