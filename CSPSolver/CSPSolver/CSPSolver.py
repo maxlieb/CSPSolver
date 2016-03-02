@@ -41,15 +41,35 @@ class Domain(object):
         self.AttributeInVar =AttributeInVar
 
 
+# Create init the Australian Map CSP
 a = CSP()
+
+# Populate Variables
 a.varDict["WA"]=None
 a.varDict["NT"]=None
 a.varDict["Q"]=None
 a.varDict["SA"]=None
 a.varDict["NSW"]=None
 a.varDict["V"]=None
-a.varDict["T"]="Red"
+a.varDict["T"]=None
+
+# Domains
+a.domDict["WA"] =   ["Red","Green","Blue"]
+a.domDict["NT"] =   ["Red","Green","Blue"]
+a.domDict["Q"]  =   ["Red","Green","Blue"]
+a.domDict["SA"] =   ["Red","Green","Blue"]
+a.domDict["NSW"]=   ["Red","Green","Blue"]
+a.domDict["V"]  =   ["Red","Green","Blue"]
+a.domDict["T"]  =   ["Red","Green","Blue"]
+
+a.constraintDict["WA"] = 
+a.constraintDict["NT"] =
+a.constraintDict["Q"]  =
+a.constraintDict["SA"] =
+a.constraintDict["NSW"]=
+a.constraintDict["V"]  =
+a.constraintDict["T"]  =
+
+
 print a.varDict["T"]
-
-
-
+print a.domDict["T"][1]
