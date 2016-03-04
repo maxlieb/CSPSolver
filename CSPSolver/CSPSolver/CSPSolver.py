@@ -62,13 +62,13 @@ a.domDict["NSW"]=   ["Red","Green","Blue"]
 a.domDict["V"]  =   ["Red","Green","Blue"]
 a.domDict["T"]  =   ["Red","Green","Blue"]
 
-a.constraintDict["WA"] = 
-a.constraintDict["NT"] =
-a.constraintDict["Q"]  =
-a.constraintDict["SA"] =
-a.constraintDict["NSW"]=
-a.constraintDict["V"]  =
-a.constraintDict["T"]  =
+#a.constraintDict["WA"] = 
+#a.constraintDict["NT"] =
+#a.constraintDict["Q"]  =
+#a.constraintDict["SA"] =
+#a.constraintDict["NSW"]=
+#a.constraintDict["V"]  =
+#a.constraintDict["T"]  =
 
 
 print a.varDict["T"]
