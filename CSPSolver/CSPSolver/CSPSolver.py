@@ -17,9 +17,13 @@ class CSP(object):
         self.domDict = dict()
         self.constraintDict = dict()
     # test comment
-    def Solve(self):
+    def Solve(self):        
         pass
     
+    def GlobalValidate():
+        for i in constraintDict:
+            i.Validate
+            
     def Randomize(self):
         pass
         
@@ -27,12 +31,14 @@ class CSP(object):
         pass
 
 class Constraint(object):
-    def __init__(self, funcList):
-        self.funcList = funcList
-        self.Oparation = dict()
+    def __init__(self, varName,funcList=None, checklist=None):
+        self.myVarName = varName
+        self.funcList = funcList if funcList else dict()
+        self.checklist = checklist if checklist else dict()
     
-    def Validate(self):
-        pass
+    def Validate(self, constaName, *args):    
+           
+        #return all([self.funcList[i](*args) for i in checklist])        
 
 class Domain(object):
     def __init__(self, Ranges, Values, AttributeInVar):
@@ -42,6 +48,7 @@ class Domain(object):
 
 
 # Create init the Australian Map CSP
+global a 
 a = CSP()
 
 # Populate Variables
@@ -62,14 +69,14 @@ a.domDict["NSW"]=   ["Red","Green","Blue"]
 a.domDict["V"]  =   ["Red","Green","Blue"]
 a.domDict["T"]  =   ["Red","Green","Blue"]
 
-#a.constraintDict["WA"] = 
-#a.constraintDict["NT"] =
-#a.constraintDict["Q"]  =
-#a.constraintDict["SA"] =
-#a.constraintDict["NSW"]=
-#a.constraintDict["V"]  =
-#a.constraintDict["T"]  =
+diffFuncList = {"Differant": lambda x,y: x!=y}
+a.constraintDict["WA"] = Constraint("WA",diffFuncList,{"Differant":["NT","SA"]})
+a.constraintDict["NT"] = Constraint("NT",diffFuncList,{"Differant":["WA","SA","Q"]})
+a.constraintDict["Q"]  = Constraint("Q",diffFuncList,{"Differant":["NT","SA","NSW"]})
+a.constraintDict["SA"] = Constraint("SA",diffFuncList,{"Differant":["WA","NT","Q","NSW","V"]})
+a.constraintDict["NSW"]= Constraint("NSW",diffFuncList,{"Differant":["Q","SA","V"]})
+a.constraintDict["V"]  = Constraint("V", diffFuncList,{"Differant":["SA","NSW"]})
+a.constraintDict["T"]  = Constraint("T", diffFuncList)
 
+print "kaki"
 
-print a.varDict["T"]
-print a.domDict["T"][1]
