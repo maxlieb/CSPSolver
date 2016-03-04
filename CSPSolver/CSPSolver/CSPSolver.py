@@ -16,7 +16,7 @@ class CSP(object):
         self.varDict = dict()
         self.domDict = dict()
         self.constraintDict = dict()
-        
+    # test comment
     def Solve(self):
         pass
     
