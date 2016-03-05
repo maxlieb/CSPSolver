@@ -25,14 +25,15 @@ class CSP(object):
 
     #Genetic Algorithm based solution implementation method
     def SolveGenetic(self):
-        popSize = 100
+        popSize = 1
 
         # Generate a population of above state size
         for i in range(0,popSize):
             individual = dict(self.varDict) #clone variables
             # for each individual generate random values for his variables
             for varName in individual:
-                individual[varName]= self.getRandomValue()
+                for currDom in self.domDict[varName]:
+                    individual[varName] = self.getRandomValue(currDom)
 
     # Generates a random value from a given domain
     def getRandomValue(self,domain):
@@ -48,10 +49,11 @@ class CSP(object):
         if rangeOrValue == "Ranges":
             range = domain.Ranges[randint(0,len(domain.Ranges)-1)]
             val = range[randint(0,len(range)-1)]
-            return val
         else:
             val = domain.Values[randint(0,len(domain.Values)-1)]
+            print val
 
+        return val
 
     # Call all variables validation methods and collect results
     def GlobalValidate(self):
@@ -117,5 +119,6 @@ a.constraintDict["NSW"]= Constraint(a.varDict,a.varDict["NSW"],diffFuncList,{"Di
 a.constraintDict["V"]  = Constraint(a.varDict,a.varDict["V"], diffFuncList,{"Differant":["SA","NSW"]})
 a.constraintDict["T"]  = Constraint(a.varDict,a.varDict["T"], diffFuncList)
 
-a.GlobalValidate()
+#a.GlobalValidate()
+a.solve("Genetic")
 
