@@ -1,3 +1,4 @@
+from random import randint
 class CSP(object):
     def __init__(self, varDict, domDict, constraintDict):
         self.varDict = varDict
@@ -16,13 +17,45 @@ class CSP(object):
         self.varDict = dict()
         self.domDict = dict()
         self.constraintDict = dict()
-    # test comment
-    def Solve(self):        
-        pass
-    
-    def GlobalValidate():
-        for i in constraintDict:
-            i.Validate
+
+    def solve(self, algorithm):
+        if algorithm == "Genetic":
+            self.SolveGenetic()
+
+
+    #Genetic Algorithm based solution implementation method
+    def SolveGenetic(self):
+        popSize = 100
+
+        # Generate a population of above state size
+        for i in range(0,popSize):
+            individual = dict(self.varDict) #clone variables
+            # for each individual generate random values for his variables
+            for varName in individual:
+                individual[varName]= self.getRandomValue()
+
+    # Generates a random value from a given domain
+    def getRandomValue(self,domain):
+
+        # Decide (randomly if possible) if the random value will
+        # be selected from a values list of a range list
+        rangeOrValue = "Values"
+        if domain.Ranges and domain.Values:
+            rangeOrValue = "Ranges" if randint(1,2) == 1 else "Values"
+        elif domain.Ranges:
+            rangeOrValue == "Ranges"
+
+        if rangeOrValue == "Ranges":
+            domain.Ranges[randint(0,len(domain.Ranges)-1)]
+            print "pizdets1"
+        else:
+            print "Pizdets2"
+
+
+    # Call all variables validation methods and collect results
+    def GlobalValidate(self):
+        for k,val in self.constraintDict.iteritems():
+           print val.Validate()
             
     def Randomize(self):
         pass
@@ -31,14 +64,18 @@ class CSP(object):
         pass
 
 class Constraint(object):
-    def __init__(self, varName,funcList=None, checklist=None):
-        self.myVarName = varName
+    def __init__(self, varDict,varValue,funcList=None, checklist=None):
+        self.varDict = varDict
+        self.varValue = varValue
         self.funcList = funcList if funcList else dict()
         self.checklist = checklist if checklist else dict()
     
-    def Validate(self, constaName, *args):    
-           
-        #return all([self.funcList[i](*args) for i in checklist])        
+    def Validate(self):  
+        for k,values in self.checklist.iteritems():
+            for currVal in values:
+                if(self.funcList[k](self.varValue,self.varDict[currVal]) == False):
+                    return False
+        return True
 
 class Domain(object):
     def __init__(self, Ranges, Values, AttributeInVar):
@@ -47,36 +84,37 @@ class Domain(object):
         self.AttributeInVar =AttributeInVar
 
 
-# Create init the Australian Map CSP
+# Create and init the Australian Map CSP
 global a 
 a = CSP()
 
 # Populate Variables
-a.varDict["WA"]=None
-a.varDict["NT"]=None
-a.varDict["Q"]=None
-a.varDict["SA"]=None
-a.varDict["NSW"]=None
-a.varDict["V"]=None
-a.varDict["T"]=None
+a.varDict["WA"] = None
+a.varDict["NT"] = None
+a.varDict["Q"]  = None
+a.varDict["SA"] = None
+a.varDict["NSW"]= None
+a.varDict["V"]  = None
+a.varDict["T"]  = None
 
 # Domains
-a.domDict["WA"] =   ["Red","Green","Blue"]
-a.domDict["NT"] =   ["Red","Green","Blue"]
-a.domDict["Q"]  =   ["Red","Green","Blue"]
-a.domDict["SA"] =   ["Red","Green","Blue"]
-a.domDict["NSW"]=   ["Red","Green","Blue"]
-a.domDict["V"]  =   ["Red","Green","Blue"]
-a.domDict["T"]  =   ["Red","Green","Blue"]
+dom = Domain(None,["Red","Green","Blue"],"Color")
+a.domDict["WA"] =   [dom]
+a.domDict["NT"] =   [dom]
+a.domDict["Q"]  =   [dom]
+a.domDict["SA"] =   [dom]
+a.domDict["NSW"]=   [dom]
+a.domDict["V"]  =   [dom]
+a.domDict["T"]  =   [dom]
 
 diffFuncList = {"Differant": lambda x,y: x!=y}
-a.constraintDict["WA"] = Constraint("WA",diffFuncList,{"Differant":["NT","SA"]})
-a.constraintDict["NT"] = Constraint("NT",diffFuncList,{"Differant":["WA","SA","Q"]})
-a.constraintDict["Q"]  = Constraint("Q",diffFuncList,{"Differant":["NT","SA","NSW"]})
-a.constraintDict["SA"] = Constraint("SA",diffFuncList,{"Differant":["WA","NT","Q","NSW","V"]})
-a.constraintDict["NSW"]= Constraint("NSW",diffFuncList,{"Differant":["Q","SA","V"]})
-a.constraintDict["V"]  = Constraint("V", diffFuncList,{"Differant":["SA","NSW"]})
-a.constraintDict["T"]  = Constraint("T", diffFuncList)
+a.constraintDict["WA"] = Constraint(a.varDict,a.varDict["WA"],diffFuncList,{"Differant":["NT","SA"]})
+a.constraintDict["NT"] = Constraint(a.varDict,a.varDict["NT"],diffFuncList,{"Differant":["WA","SA","Q"]})
+a.constraintDict["Q"]  = Constraint(a.varDict,a.varDict["Q"],diffFuncList,{"Differant":["NT","SA","NSW"]})
+a.constraintDict["SA"] = Constraint(a.varDict,a.varDict["SA"],diffFuncList,{"Differant":["WA","NT","Q","NSW","V"]})
+a.constraintDict["NSW"]= Constraint(a.varDict,a.varDict["NSW"],diffFuncList,{"Differant":["Q","SA","V"]})
+a.constraintDict["V"]  = Constraint(a.varDict,a.varDict["V"], diffFuncList,{"Differant":["SA","NSW"]})
+a.constraintDict["T"]  = Constraint(a.varDict,a.varDict["T"], diffFuncList)
 
-print "kaki"
+a.GlobalValidate()
 
