@@ -46,10 +46,11 @@ class CSP(object):
             rangeOrValue == "Ranges"
 
         if rangeOrValue == "Ranges":
-            domain.Ranges[randint(0,len(domain.Ranges)-1)]
-            print "pizdets1"
+            range = domain.Ranges[randint(0,len(domain.Ranges)-1)]
+            val = range[randint(0,len(range)-1)]
+            return val
         else:
-            print "Pizdets2"
+            val = domain.Values[randint(0,len(domain.Values)-1)]
 
 
     # Call all variables validation methods and collect results
