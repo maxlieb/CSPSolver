@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, random
 class CSP(object):
     def __init__(self, varDict, domDict, constraintDict):
         self.varDict = varDict
@@ -24,19 +24,20 @@ class CSP(object):
 
 
     #Genetic Algorithm based solution implementation method
-    def SolveGenetic(self, retain=0.2, random_select=0.05, mutate=0.01):
-        popSize = 5
+    def SolveGenetic(self, retain=0.2, random_select=0.5, mutate=0.01):
+        popSize = 100
         population = []
         graded = []
 
-        # Generate a population of above state size
+        # Generate a population of above stated size
         for i in range(0,popSize):
             individual = dict(self.varDict) #clone variables
             # for each individual generate random values for his variables
             for varName in individual:
+                # foreach domain of the current variable
                 for currDom in self.domDict[varName]:
-                    individual[varName] = self.getRandomValue(currDom)
-                    print varName, individual[varName]
+                    setattr(individual[varName], currDom.AttributeInVar, self.getRandomValue(currDom))
+                    #print varName, getattr(individual[varName],currDom.AttributeInVar)
 
             population.append(individual)
             graded.append((self.GlobalValidate(individual), individual))
@@ -46,41 +47,48 @@ class CSP(object):
         retain_length = int(len(graded)*retain)
         parents = graded[:retain_length]
 
-        print graded
-        print parents
+        for parent in parents:
+            for k,v in parent.iteritems():
+                print k,v.Color
+            print "--------------------------------"
 
         # randomly add other individuals to promote genetic diversity
         for X in graded[retain_length:]:
-            if random_select > random():
+            if random_select > random(): #random_select-0.01:
                 parents.append(X)
 
         # mutate some individuals
-        for X in parents:
+        for parent in parents:
             if mutate > random():
-                pos_to_mutate = randint(0, len(X)-1)
-                # this mutation is not ideal, because it
-                # restricts the range of possible values,
-                # but the function is unaware of the min/max
-                # values used to create the individuals,
-                key = X.keys()[pos_to_mutate]
-                for currDom in self.domDict[key]:
-                    X[key] = self.getRandomValue(currDom)
+                randomkey = random.choice(parent.keys())
 
-        # crossover parents to create children
-        parents_length = len(parents)
-        desired_length = len(pop) - parents_length
-        children = []
-        while len(children) < desired_length:
-            male = randint(0, parents_length-1)
-            female = randint(0, parents_length-1)
-            if male != female:
-                male = parents[male]
-                female = parents[female]
-                half = len(male) / 2
-                child = male[:half] + female[half:]
-                children.append(child)
-
-        parents.extend(children)
+#        for X in parents:
+#            if mutate > random():
+#                pos_to_mutate = randint(0, len(X)-1)
+#                # this mutation is not ideal, because it
+#                # restricts the range of possible values,
+#                # but the function is unaware of the min/max
+#                # values used to create the individuals,
+#                key = X.keys()[pos_to_mutate]
+#                for currDom in self.domDict[key]:
+#                    X[key] = self.getRandomValue(currDom)
+#
+#        # crossover parents to create children
+#        parents_length = len(parents)
+#        desired_length = len(pop) - parents_length
+#        children = []
+#        while len(children) < desired_length:
+#            male = randint(0, parents_length-1)
+#            female = randint(0, parents_length-1)
+#            if male != female:
+#                male = parents[male]
+#                female = parents[female]
+#                half = len(male) / 2
+#                child = male[:half] + female[half:]
+#                children.append(child)
+#
+#        parents.extend(children)
+#
 
 
 
@@ -112,7 +120,7 @@ class CSP(object):
 
         for k,val in self.constraintDict.iteritems():
             sum += val.Validate(individual)
-            print k, val.Validate(individual)
+            #print k, val.Validate(individual)
 
         return sum
             
@@ -155,14 +163,18 @@ class Domain(object):
 global a 
 a = CSP()
 
+class var(object):
+    def __init__(self, Color):
+        self.Color = Color
+
 # Populate Variables
-a.varDict["WA"] = None
-a.varDict["NT"] = None
-a.varDict["Q"]  = None
-a.varDict["SA"] = None
-a.varDict["NSW"]= None
-a.varDict["V"]  = None
-a.varDict["T"]  = None
+a.varDict["WA"] = var(None)
+a.varDict["NT"] = var(None)
+a.varDict["Q"]  = var(None)
+a.varDict["SA"] = var(None)
+a.varDict["NSW"]= var(None)
+a.varDict["V"]  = var(None)
+a.varDict["T"]  = var(None)
 
 # Domains
 dom = Domain(None,["Red","Green","Blue"],"Color")
