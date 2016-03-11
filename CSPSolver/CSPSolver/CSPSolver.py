@@ -24,25 +24,12 @@ class CSP(object):
 
 
     #Genetic Algorithm based solution implementation method
-    def SolveGenetic(self, retain=0.2, random_select=0.5, mutate=0.01):
-        popSize = 100
-        population = []
-        graded = []
+    def SolveGenetic(self, popSize=100):
+        pop = self.population(popSize)
+        self.evolve(pop)
 
-        # Generate a population of above stated size
-        for i in range(0,popSize):
-            individual = dict(self.varDict) #clone variables
-            # for each individual generate random values for his variables
-            for varName in individual:
-                # foreach domain of the current variable
-                for currDom in self.domDict[varName]:
-                    setattr(individual[varName], currDom.AttributeInVar, self.getRandomValue(currDom))
-                    #print varName, getattr(individual[varName],currDom.AttributeInVar)
-
-            population.append(individual)
-            graded.append((self.GlobalValidate(individual), individual))
-
-        # get the individual in order acceding by its grade
+    def evolve(self, pop, retain=0.2, random_select=0.5, mutate=0.2):
+        graded = [(self.GlobalValidate(x),x) for x in pop]
         graded = [ x[1] for x in sorted(graded)]
         retain_length = int(len(graded)*retain)
         parents = graded[:retain_length]
@@ -59,41 +46,46 @@ class CSP(object):
 
         # mutate some individuals
         for parent in parents:
-            if mutate > random():
-                randomkey = random.choice(parent.keys())
+            if 1==1:
+            #if mutate > random():
+                randomkey = list(parent.keys())[randint(0,len(list(parent.keys()))-1)]
+                for currDom in self.domDict[randomkey]:
+                    setattr(parent[randomkey], currDom.AttributeInVar, self.getRandomValue(currDom))
 
-#        for X in parents:
-#            if mutate > random():
-#                pos_to_mutate = randint(0, len(X)-1)
-#                # this mutation is not ideal, because it
-#                # restricts the range of possible values,
-#                # but the function is unaware of the min/max
-#                # values used to create the individuals,
-#                key = X.keys()[pos_to_mutate]
-#                for currDom in self.domDict[key]:
-#                    X[key] = self.getRandomValue(currDom)
-#
-#        # crossover parents to create children
-#        parents_length = len(parents)
-#        desired_length = len(pop) - parents_length
-#        children = []
-#        while len(children) < desired_length:
-#            male = randint(0, parents_length-1)
-#            female = randint(0, parents_length-1)
-#            if male != female:
-#                male = parents[male]
-#                female = parents[female]
-#                half = len(male) / 2
-#                child = male[:half] + female[half:]
-#                children.append(child)
-#
-#        parents.extend(children)
-#
+        # crossover parents to create children
+        parents_length = len(parents)
+        desired_length = len(pop) - parents_length
 
+        children = []
+        while len(children) < desired_length:
+            male = randint(0, parents_length-1)
+            female = randint(0, parents_length-1)
+            if male != female:
+                male = parents[male]
+                female = parents[female]
+                malehalf = dict(male.items()[len(male)/2:])
+                femalehalf = dict(female.items()[:len(female)/2])
+                child = dict(malehalf).update(femalehalf)
+                children.append(child)
+        parents.extend(children)
+        print len(parents)
+        return parents
 
+    def population(self,length):
+        pop = []
+        # Generate a population of above stated size
+        for i in range(0,length):
+            individual = dict(self.varDict) #clone variables
+            # for each individual generate random values for his variables
+            for varName in individual:
+                # foreach domain of the current variable
+                for currDom in self.domDict[varName]:
+                    setattr(individual[varName], currDom.AttributeInVar, self.getRandomValue(currDom))
+            pop.append(individual)
+        return pop
 
     # Generates a random value from a given domain
-    def getRandomValue(self,domain):
+    def getRandomValue(self, domain):
 
         # Decide (randomly if possible) if the random value will
         # be selected from a values list of a range list
