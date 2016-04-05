@@ -1,0 +1,352 @@
+{
+    "constraintDict": {
+        "NSW": {
+            "checklist": {
+                "Different": [
+                    "Q", 
+                    "SA", 
+                    "V"
+                ]
+            }, 
+            "funcList": {
+                "Different": {}
+            }, 
+            "varDict": {
+                "NSW": {
+                    "Color": null
+                }, 
+                "NT": {
+                    "Color": null
+                }, 
+                "Q": {
+                    "Color": null
+                }, 
+                "SA": {
+                    "Color": null
+                }, 
+                "T": {
+                    "Color": null
+                }, 
+                "V": {
+                    "Color": null
+                }, 
+                "WA": {
+                    "Color": null
+                }
+            }, 
+            "varKey": "NSW"
+        }, 
+        "NT": {
+            "checklist": {
+                "Different": [
+                    "WA", 
+                    "SA", 
+                    "Q"
+                ]
+            }, 
+            "funcList": {
+                "Different": {}
+            }, 
+            "varDict": {
+                "NSW": {
+                    "Color": null
+                }, 
+                "NT": {
+                    "Color": null
+                }, 
+                "Q": {
+                    "Color": null
+                }, 
+                "SA": {
+                    "Color": null
+                }, 
+                "T": {
+                    "Color": null
+                }, 
+                "V": {
+                    "Color": null
+                }, 
+                "WA": {
+                    "Color": null
+                }
+            }, 
+            "varKey": "NT"
+        }, 
+        "Q": {
+            "checklist": {
+                "Different": [
+                    "NT", 
+                    "SA", 
+                    "NSW"
+                ]
+            }, 
+            "funcList": {
+                "Different": {}
+            }, 
+            "varDict": {
+                "NSW": {
+                    "Color": null
+                }, 
+                "NT": {
+                    "Color": null
+                }, 
+                "Q": {
+                    "Color": null
+                }, 
+                "SA": {
+                    "Color": null
+                }, 
+                "T": {
+                    "Color": null
+                }, 
+                "V": {
+                    "Color": null
+                }, 
+                "WA": {
+                    "Color": null
+                }
+            }, 
+            "varKey": "Q"
+        }, 
+        "SA": {
+            "checklist": {
+                "Different": [
+                    "WA", 
+                    "NT", 
+                    "Q", 
+                    "NSW", 
+                    "V"
+                ]
+            }, 
+            "funcList": {
+                "Different": {}
+            }, 
+            "varDict": {
+                "NSW": {
+                    "Color": null
+                }, 
+                "NT": {
+                    "Color": null
+                }, 
+                "Q": {
+                    "Color": null
+                }, 
+                "SA": {
+                    "Color": null
+                }, 
+                "T": {
+                    "Color": null
+                }, 
+                "V": {
+                    "Color": null
+                }, 
+                "WA": {
+                    "Color": null
+                }
+            }, 
+            "varKey": "SA"
+        }, 
+        "T": {
+            "checklist": {}, 
+            "funcList": {
+                "Different": {}
+            }, 
+            "varDict": {
+                "NSW": {
+                    "Color": null
+                }, 
+                "NT": {
+                    "Color": null
+                }, 
+                "Q": {
+                    "Color": null
+                }, 
+                "SA": {
+                    "Color": null
+                }, 
+                "T": {
+                    "Color": null
+                }, 
+                "V": {
+                    "Color": null
+                }, 
+                "WA": {
+                    "Color": null
+                }
+            }, 
+            "varKey": "T"
+        }, 
+        "V": {
+            "checklist": {
+                "Different": [
+                    "SA", 
+                    "NSW"
+                ]
+            }, 
+            "funcList": {
+                "Different": {}
+            }, 
+            "varDict": {
+                "NSW": {
+                    "Color": null
+                }, 
+                "NT": {
+                    "Color": null
+                }, 
+                "Q": {
+                    "Color": null
+                }, 
+                "SA": {
+                    "Color": null
+                }, 
+                "T": {
+                    "Color": null
+                }, 
+                "V": {
+                    "Color": null
+                }, 
+                "WA": {
+                    "Color": null
+                }
+            }, 
+            "varKey": "V"
+        }, 
+        "WA": {
+            "checklist": {
+                "Different": [
+                    "NT", 
+                    "SA"
+                ]
+            }, 
+            "funcList": {
+                "Different": {}
+            }, 
+            "varDict": {
+                "NSW": {
+                    "Color": null
+                }, 
+                "NT": {
+                    "Color": null
+                }, 
+                "Q": {
+                    "Color": null
+                }, 
+                "SA": {
+                    "Color": null
+                }, 
+                "T": {
+                    "Color": null
+                }, 
+                "V": {
+                    "Color": null
+                }, 
+                "WA": {
+                    "Color": null
+                }
+            }, 
+            "varKey": "WA"
+        }
+    }, 
+    "domDict": {
+        "NSW": [
+            {
+                "AttributeInVar": "Color", 
+                "Ranges": null, 
+                "Values": [
+                    "Red", 
+                    "Green", 
+                    "Blue"
+                ]
+            }
+        ], 
+        "NT": [
+            {
+                "AttributeInVar": "Color", 
+                "Ranges": null, 
+                "Values": [
+                    "Red", 
+                    "Green", 
+                    "Blue"
+                ]
+            }
+        ], 
+        "Q": [
+            {
+                "AttributeInVar": "Color", 
+                "Ranges": null, 
+                "Values": [
+                    "Red", 
+                    "Green", 
+                    "Blue"
+                ]
+            }
+        ], 
+        "SA": [
+            {
+                "AttributeInVar": "Color", 
+                "Ranges": null, 
+                "Values": [
+                    "Red", 
+                    "Green", 
+                    "Blue"
+                ]
+            }
+        ], 
+        "T": [
+            {
+                "AttributeInVar": "Color", 
+                "Ranges": null, 
+                "Values": [
+                    "Red", 
+                    "Green", 
+                    "Blue"
+                ]
+            }
+        ], 
+        "V": [
+            {
+                "AttributeInVar": "Color", 
+                "Ranges": null, 
+                "Values": [
+                    "Red", 
+                    "Green", 
+                    "Blue"
+                ]
+            }
+        ], 
+        "WA": [
+            {
+                "AttributeInVar": "Color", 
+                "Ranges": null, 
+                "Values": [
+                    "Red", 
+                    "Green", 
+                    "Blue"
+                ]
+            }
+        ]
+    }, 
+    "varDict": {
+        "NSW": {
+            "Color": null
+        }, 
+        "NT": {
+            "Color": null
+        }, 
+        "Q": {
+            "Color": null
+        }, 
+        "SA": {
+            "Color": null
+        }, 
+        "T": {
+            "Color": null
+        }, 
+        "V": {
+            "Color": null
+        }, 
+        "WA": {
+            "Color": null
+        }
+    }
+}

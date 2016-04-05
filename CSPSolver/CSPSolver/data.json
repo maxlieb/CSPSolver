@@ -1,0 +1,169 @@
+{
+  "Vars" : {
+    "WA": {
+      "Color": null
+    },
+    "NT": {
+      "Color": null
+    },
+    "Q": {
+      "Color": null
+    },
+    "SA": {
+      "Color": null
+    },
+    "NSW": {
+      "Color": null
+    },
+    "V": {
+      "Color": null
+    },
+    "T": {
+      "Color": null
+    }
+  },
+  "Domains" : {
+    "WA": {
+      "Color": {
+        "Ranges" : null,
+        "Values" : ["Red","Green","Blue"]
+      }
+    },
+    "NT": {
+      "Color": {
+        "Ranges" : null,
+        "Values" : ["Red","Green","Blue"]
+      }
+    },
+    "Q": {
+      "Color": {
+        "Ranges" : null,
+        "Values" : ["Red","Green","Blue"]
+      }
+    },
+    "SA": {
+      "Color": {
+        "Ranges" : null,
+        "Values" : ["Red","Green","Blue"]
+      }
+    },
+    "NSW": {
+      "Color": {
+        "Ranges" : null,
+        "Values" : ["Red","Green","Blue"]
+      }
+    },
+    "V": {
+      "Color": {
+        "Ranges" : null,
+        "Values" : ["Red","Green","Blue"]
+      }
+    },
+    "T": {
+      "Color": {
+        "Ranges" : null,
+        "Values" : ["Red","Green","Blue"]
+      }
+    }
+  },
+  "Constraints" : {
+    "WA": {
+      "FuncList": [
+        {
+          "Name" : "Different",
+          "Function" : "lambda x,y: x!=y"
+        }
+      ],
+      "CheckList": [
+        {
+          "Name" : "Different",
+          "ArgList" : ["NT","SA"]
+        }
+      ]
+    },
+    "NT": {
+      "FuncList": [
+        {
+          "Name" : "Different",
+          "Function" : "lambda x,y: x!=y"
+        }
+      ],
+      "CheckList": [
+        {
+          "Name" : "Different",
+          "ArgList" : ["NT","SA"]
+        }
+      ]
+    },
+    "Q": {
+      "FuncList": [
+        {
+          "Name" : "Different",
+          "Function" : "lambda x,y: x!=y"
+        }
+      ],
+      "CheckList": [
+        {
+          "Name" : "Different",
+          "ArgList" : ["NT","SA"]
+        }
+      ]
+    },
+    "SA": {
+      "FuncList": [
+        {
+          "Name" : "Different",
+          "Function" : "lambda x,y: x!=y"
+        }
+      ],
+      "CheckList": [
+        {
+          "Name" : "Different",
+          "ArgList" : ["NT","SA"]
+        }
+      ]
+    },
+    "NSW": {
+      "FuncList": [
+        {
+          "Name" : "Different",
+          "Function" : "lambda x,y: x!=y"
+        }
+      ],
+      "CheckList": [
+        {
+          "Name" : "Different",
+          "ArgList" : ["NT","SA"]
+        }
+      ]
+    },
+    "V": {
+      "FuncList": [
+        {
+          "Name" : "Different",
+          "Function" : "lambda x,y: x!=y"
+        }
+      ],
+      "CheckList": [
+        {
+          "Name" : "Different",
+          "ArgList" : ["NT","SA"]
+        }
+      ]
+    },
+    "T": {
+      "FuncList": [
+        {
+          "Name" : "Different",
+          "Function" : "lambda x,y: x!=y"
+        }
+      ],
+      "CheckList": [
+        {
+          "Name" : "Different",
+          "ArgList" : ["NT","SA"]
+        }
+      ]
+    }
+  }
+}

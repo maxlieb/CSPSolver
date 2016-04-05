@@ -1,5 +1,5 @@
 from random import randint, random
-class CSP(object):
+class CSP(dict):
     def __init__(self, varDict, domDict, constraintDict):
         self.varDict = varDict
         self.domDict = domDict
@@ -122,7 +122,13 @@ class CSP(object):
     def Next(self):
         pass
 
-class Constraint(object):
+    def __getattr__(self, item):
+        return self[item]
+
+    def __setattr__(self, key, value):
+        self[key] = value
+
+class Constraint(dict):
     def __init__(self, varDict, varKey, funcList=None, checklist=None):
         self.varDict = varDict
         self.varKey = varKey
@@ -144,21 +150,37 @@ class Constraint(object):
                     counter += 1
         return counter
 
-class Domain(object):
+    def __getattr__(self, item):
+        return self[item]
+
+    def __setattr__(self, key, value):
+        self[key] = value
+
+class Domain(dict):
     def __init__(self, Ranges, Values, AttributeInVar):
         self.Ranges = Ranges
         self.Values = Values
         self.AttributeInVar =AttributeInVar
 
+    def __getattr__(self, item):
+        return self[item]
+
+    def __setattr__(self, key, value):
+        self[key] = value
 
 # Create and init the Australian Map CSP
 global a 
 a = CSP()
 
-class var(object):
+class var(dict):
     def __init__(self, Color):
         self.Color = Color
 
+    def __getattr__(self, item):
+        return self[item]
+
+    def __setattr__(self, key, value):
+        self[key] = value
 # Populate Variables
 a.varDict["WA"] = var(None)
 a.varDict["NT"] = var(None)
@@ -188,5 +210,9 @@ a.constraintDict["V"]  = Constraint(a.varDict,"V", diffFuncList,{"Different":["S
 a.constraintDict["T"]  = Constraint(a.varDict,"T", diffFuncList)
 
 #a.GlobalValidate()
-a.solve("Genetic")
 
+# example for saving the results to json file
+from JsonLoader import JsonLoader
+JsonLoader.SaveOutputData(a)
+
+a.solve("Genetic")
