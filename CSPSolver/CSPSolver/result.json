@@ -1,5 +1,23 @@
 {
     "NSW": {
-        "Color": "Blue", 
-        "__builtins__": {
-            "ArithmeticError": 
+        "Color": "Red"
+    }, 
+    "NT": {
+        "Color": "Red"
+    }, 
+    "Q": {
+        "Color": "Green"
+    }, 
+    "SA": {
+        "Color": "Blue"
+    }, 
+    "T": {
+        "Color": "Red"
+    }, 
+    "V": {
+        "Color": "Green"
+    }, 
+    "WA": {
+        "Color": "Green"
+    }
+}

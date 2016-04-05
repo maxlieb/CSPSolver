@@ -1,48 +1,25 @@
 from random import randint, random
 from operator import add
-from JsonLoader import JsonLoader
-import time
-import copy
-
-# Main Problem Class
 class CSP(object):
-    def __init__(self, path = None, varDict = None, domDict = None, constraintDict = None):
-        if path == None:
-            if varDict == None:
-                self.varDict = dict()
-            else:
-                self.varDict = varDict
-            if domDict == None:
-                self.domDict = dict()
-            else:
-                self.domDict = domDict
-            if constraintDict == None:
-                self.constraintDict = dict()
-            else:
-                self.constraintDict = constraintDict
-        else:
-            data = JsonLoader.GetInputData(path)
-            self.varDict = data["Vars"]
-            self.domDict = dict()
-            for currVar in data["Domains"]:
-                currDomDict = data["Domains"][currVar]
-                currVarDomList = []
-                for currAttr in currDomDict:
-                     currVarDomList.append( Domain(currDomDict[currAttr]["Ranges"],
-                                                   currDomDict[currAttr]["Values"],
-                                                   currAttr))
-                self.domDict[currVar] = currVarDomList
-            self.constraintDict = dict()
-            for currVar in data["Constraints"]:
-                formattedFuncDict = dict()
-                formattedChecksDict = dict()
-                for f in data["Constraints"][currVar]["FuncList"]:
-                    formattedFuncDict[f["Name"]] = str(f["Function"])
-                for c in data["Constraints"][currVar]["CheckList"]:
-                    formattedChecksDict[c["Name"]] = c["ArgList"]
-                self.constraintDict[currVar] = Constraint(self.varDict, currVar, formattedFuncDict, formattedChecksDict)
+    def __init__(self, varDict, domDict, constraintDict):
+        self.varDict = varDict
+        self.domDict = domDict
+        self.constraintDict = constraintDict
         self.fitness_history = []
 
+    def __init__(self, path):
+
+        self.varDict = None
+        self.domDict = None
+        self.constraintDict = None
+        self.fitness_history = []
+        # TODO: Add load data from XML to class Data Members
+
+    def __init__(self):
+        self.varDict = dict()
+        self.domDict = dict()
+        self.constraintDict = dict()
+        self.fitness_history = []
 
     def solve(self, algorithm):
         if algorithm == "Genetic":
@@ -53,7 +30,7 @@ class CSP(object):
     def SolveGenetic(self, popSize=100):
         pop = self.population(popSize)
         isSolved = False
-        for _ in xrange(1000):
+        for _ in xrange(100):
             pop = self.evolve(pop)
             for p in pop:
                 self.fitness_history.append(self.GlobalValidate(p))
@@ -64,7 +41,7 @@ class CSP(object):
         if isSolved:
             Solution = pop[-1]
             for k, v in Solution.iteritems():
-                print "{0}:{1}".format(k,v["Color"])
+                print "{0}:{1}".format(k,v.Color)
 
             return Solution
         else:
@@ -91,7 +68,7 @@ class CSP(object):
         parents = graded[:retain_length]
         # for parent in parents:
         #     for k,v in parent.iteritems():
-        #         print k,v["Color"]
+        #         print k,v.Color
         #     print "--------------------------------"
 
 
@@ -106,7 +83,7 @@ class CSP(object):
             if mutate > random():
                 randomkey = list(parent.keys())[randint(0,len(list(parent.keys()))-1)]
                 for currDom in self.domDict[randomkey]:
-                    parent[randomkey][currDom.AttributeInVar]= self.getRandomValue(currDom)
+                    setattr(parent[randomkey], currDom.AttributeInVar, self.getRandomValue(currDom))
 
         # crossover parents to create children
         parents_length = len(parents)
@@ -121,12 +98,15 @@ class CSP(object):
             if male != female:
                 male = parents[male]
                 female = parents[female]
+                # malehalf = dict(male.items()[len(male)/2:])
+                # femalehalf = dict(female.items()[:len(female)/2])
 
-                malehalf = copy.deepcopy(male.items()[len(male)/2:])
-                femalehalf = copy.deepcopy(female.items()[:len(female)/2])
+                malehalf = male.items()[len(male)/2:]
+                femalehalf = female.items()[:len(female)/2]
                 malehalf.extend(femalehalf)
                 child = dict(malehalf)
-
+                #
+                # child = dict(malehalf).update(femalehalf)
                 children.append(child)
         print "B:Parents Length: {0}".format(len(parents))
         print "children: {0}".format(children)
@@ -138,12 +118,12 @@ class CSP(object):
         pop = []
         # Generate a population of above stated size
         for i in range(0,length):
-            individual = copy.deepcopy(self.varDict) #clone variables
+            individual = dict(self.varDict) #clone variables
             # for each individual generate random values for his variables
             for varName in individual:
                 # foreach domain of the current variable
                 for currDom in self.domDict[varName]:
-                    individual[varName][currDom.AttributeInVar] = self.getRandomValue(currDom)
+                    setattr(individual[varName], currDom.AttributeInVar, self.getRandomValue(currDom))
             pop.append(individual)
         return pop
 
@@ -152,6 +132,8 @@ class CSP(object):
 
         # Decide (randomly if possible) if the random value will
         # be selected from a values list of a range list
+        import time
+        time.sleep(0.01)
         rangeOrValue = "Values"
         if domain.Ranges and domain.Values:
             rangeOrValue = "Ranges" if randint(1,2) == 1 else "Values"
@@ -181,13 +163,18 @@ class CSP(object):
 
         return sum
 
+    def Randomize(self):
+        pass
+
+    def Next(self):
+        pass
 
 class Constraint(object):
-    def __init__(self, varDict, varKey, funcList=None, checkList=None):
+    def __init__(self, varDict, varKey, funcList=None, checklist=None):
         self.varDict = varDict
         self.varKey = varKey
         self.funcList = funcList if funcList else dict()
-        self.checkList = checkList if checkList else dict()
+        self.checklist = checklist if checklist else dict()
 
     def Validate(self, individual = None):
         counter = 0
@@ -197,13 +184,12 @@ class Constraint(object):
             individual = self.varDict
 
         # pass over the functions to check (e.g "Different")
-        for k,values in self.checkList.iteritems():
+        for k,values in self.checklist.iteritems():
             # pass over the given arguments for the current function (e.g ["NT","SA"])
             for currVal in values:
-                code = "code="+self.funcList[k]
-                exec code
-                if(code(varValue, individual[currVal]) == False):
+                if(self.funcList[k](varValue, individual[currVal]) == False):
                     counter += 1
+
         return counter
 
 class Domain(object):
@@ -214,37 +200,43 @@ class Domain(object):
 
 
 # Create and init the Australian Map CSP
-#global a
-#a = CSP()
-#
-## Populate Variables
-#a.varDict["WA"] = {"Color": None}
-#a.varDict["NT"] = {"Color": None}
-#a.varDict["Q"]  = {"Color": None}
-#a.varDict["SA"] = {"Color": None}
-#a.varDict["NSW"]= {"Color": None}
-#a.varDict["V"]  = {"Color": None}
-#a.varDict["T"]  = {"Color": None}
-#
-## Domains
-#dom = Domain(None,["Red","Green","Blue"],"Color")
-#a.domDict["WA"] =   [dom]
-#a.domDict["NT"] =   [dom]
-#a.domDict["Q"]  =   [dom]
-#a.domDict["SA"] =   [dom]
-#a.domDict["NSW"]=   [dom]
-#a.domDict["V"]  =   [dom]
-#a.domDict["T"]  =   [dom]
-#
-#diffFuncList = {"Different": lambda x,y: x["Color"]!=y["Color"]}
-#a.constraintDict["WA"] = Constraint(a.varDict,"WA",diffFuncList,{"Different":["NT","SA"]})
-#a.constraintDict["NT"] = Constraint(a.varDict,"NT",diffFuncList,{"Different":["WA","SA","Q"]})
-#a.constraintDict["Q"]  = Constraint(a.varDict,"Q",diffFuncList,{"Different":["NT","SA","NSW"]})
-#a.constraintDict["SA"] = Constraint(a.varDict,"SA",diffFuncList,{"Different":["WA","NT","Q","NSW","V"]})
-#a.constraintDict["NSW"]= Constraint(a.varDict,"NSW",diffFuncList,{"Different":["Q","SA","V"]})
-#a.constraintDict["V"]  = Constraint(a.varDict,"V", diffFuncList,{"Different":["SA","NSW"]})
-#a.constraintDict["T"]  = Constraint(a.varDict,"T", diffFuncList)
+global a
+a = CSP()
 
-a = CSP(path="data.json")
+class var(object):
+    def __init__(self, Color):
+        self.Color = Color
+
+# Populate Variables
+a.varDict["WA"] = var(None)
+a.varDict["NT"] = var(None)
+a.varDict["Q"]  = var(None)
+a.varDict["SA"] = var(None)
+a.varDict["NSW"]= var(None)
+a.varDict["V"]  = var(None)
+a.varDict["T"]  = var(None)
+
+# Domains
+dom = Domain(None,["Red","Green","Blue"],"Color")
+a.domDict["WA"] =   [dom]
+a.domDict["NT"] =   [dom]
+a.domDict["Q"]  =   [dom]
+a.domDict["SA"] =   [dom]
+a.domDict["NSW"]=   [dom]
+a.domDict["V"]  =   [dom]
+a.domDict["T"]  =   [dom]
+
+diffFuncList = {"Different": lambda x,y: x.Color!=y.Color}
+a.constraintDict["WA"] = Constraint(a.varDict,"WA",diffFuncList,{"Different":["NT","SA"]})
+a.constraintDict["NT"] = Constraint(a.varDict,"NT",diffFuncList,{"Different":["WA","SA","Q"]})
+a.constraintDict["Q"]  = Constraint(a.varDict,"Q",diffFuncList,{"Different":["NT","SA","NSW"]})
+a.constraintDict["SA"] = Constraint(a.varDict,"SA",diffFuncList,{"Different":["WA","NT","Q","NSW","V"]})
+a.constraintDict["NSW"]= Constraint(a.varDict,"NSW",diffFuncList,{"Different":["Q","SA","V"]})
+a.constraintDict["V"]  = Constraint(a.varDict,"V", diffFuncList,{"Different":["SA","NSW"]})
+a.constraintDict["T"]  = Constraint(a.varDict,"T", diffFuncList)
+
+#a.GlobalValidate()
 result = a.solve("Genetic")
-#JsonLoader.SaveOutputData(result)
+
+from JsonLoader import JsonLoader
+JsonLoader.SaveOutputData(result)
