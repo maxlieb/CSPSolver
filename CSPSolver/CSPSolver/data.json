@@ -71,7 +71,7 @@
       "FuncList": [
         {
           "Name" : "Different",
-          "Function" : "lambda x,y: x!=y"
+          "Function" : "lambda x,y: x['Color']!=y['Color']"
         }
       ],
       "CheckList": [
@@ -85,7 +85,7 @@
       "FuncList": [
         {
           "Name" : "Different",
-          "Function" : "lambda x,y: x!=y"
+          "Function" : "lambda x,y: x['Color']!=y['Color']"
         }
       ],
       "CheckList": [
@@ -99,7 +99,7 @@
       "FuncList": [
         {
           "Name" : "Different",
-          "Function" : "lambda x,y: x!=y"
+          "Function" : "lambda x,y: x['Color']!=y['Color']"
         }
       ],
       "CheckList": [
@@ -113,7 +113,7 @@
       "FuncList": [
         {
           "Name" : "Different",
-          "Function" : "lambda x,y: x!=y"
+          "Function" : "lambda x,y: x['Color']!=y['Color']"
         }
       ],
       "CheckList": [
@@ -127,7 +127,7 @@
       "FuncList": [
         {
           "Name" : "Different",
-          "Function" : "lambda x,y: x!=y"
+          "Function" : "lambda x,y: x['Color']!=y['Color']"
         }
       ],
       "CheckList": [
@@ -141,7 +141,7 @@
       "FuncList": [
         {
           "Name" : "Different",
-          "Function" : "lambda x,y: x!=y"
+          "Function" : "lambda x,y: x['Color']!=y['Color']"
         }
       ],
       "CheckList": [
@@ -155,7 +155,7 @@
       "FuncList": [
         {
           "Name" : "Different",
-          "Function" : "lambda x,y: x!=y"
+          "Function" : "lambda x,y: x['Color']!=y['Color']"
         }
       ],
       "CheckList": [
