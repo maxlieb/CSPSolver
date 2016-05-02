@@ -1,7 +1,8 @@
 from random import randint, random
 from operator import add
 from JsonLoader import JsonLoader
-import StringIO
+import time
+import copy
 
 # Main Problem Class
 class CSP(object):
@@ -52,7 +53,7 @@ class CSP(object):
     def SolveGenetic(self, popSize=100):
         pop = self.population(popSize)
         isSolved = False
-        for _ in xrange(100):
+        for _ in xrange(1000):
             pop = self.evolve(pop)
             for p in pop:
                 self.fitness_history.append(self.GlobalValidate(p))
@@ -121,8 +122,8 @@ class CSP(object):
                 male = parents[male]
                 female = parents[female]
 
-                malehalf = male.items()[len(male)/2:]
-                femalehalf = female.items()[:len(female)/2]
+                malehalf = copy.deepcopy(male.items()[len(male)/2:])
+                femalehalf = copy.deepcopy(female.items()[:len(female)/2])
                 malehalf.extend(femalehalf)
                 child = dict(malehalf)
 
@@ -137,7 +138,7 @@ class CSP(object):
         pop = []
         # Generate a population of above stated size
         for i in range(0,length):
-            individual = dict(self.varDict) #clone variables
+            individual = copy.deepcopy(self.varDict) #clone variables
             # for each individual generate random values for his variables
             for varName in individual:
                 # foreach domain of the current variable
@@ -151,8 +152,6 @@ class CSP(object):
 
         # Decide (randomly if possible) if the random value will
         # be selected from a values list of a range list
-        import time
-        time.sleep(0.01)
         rangeOrValue = "Values"
         if domain.Ranges and domain.Values:
             rangeOrValue = "Ranges" if randint(1,2) == 1 else "Values"
