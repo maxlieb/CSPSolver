@@ -4,9 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/CSPSolver.py" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a901ca00-d855-433f-96dc-98abb07f4b16" name="Default" comment="Fixed labda code executiondsf readed from file">
+    <list default="true" id="a901ca00-d855-433f-96dc-98abb07f4b16" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSPSolver.py" afterPath="$PROJECT_DIR$/CSPSolver.py" />
     </list>
     <ignored path="CSPSolver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -411,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1462204902953</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed cloning of &quot;individual&quot; dictionary so it does not look like the values generated are always the same...">
+      <created>1462209905672</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1462209905672</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -462,7 +468,8 @@
     <MESSAGE value="Tons of changes (but mostly to the ctor)  to make the thing work by loading from the json file...&#10;by the way I Fucked up the save functionality" />
     <MESSAGE value="Fixed labda code execution readed from file" />
     <MESSAGE value="Fixed labda code executiondsf readed from file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed labda code executiondsf readed from file" />
+    <MESSAGE value="fixed cloning of &quot;individual&quot; dictionary so it does not look like the values generated are always the same..." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed cloning of &quot;individual&quot; dictionary so it does not look like the values generated are always the same..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
