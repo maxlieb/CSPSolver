@@ -1,6 +1,7 @@
 from random import randint, random
 from operator import add
 from JsonLoader import JsonLoader
+import StringIO
 
 # Main Problem Class
 class CSP(object):
@@ -200,10 +201,10 @@ class Constraint(object):
         for k,values in self.checkList.iteritems():
             # pass over the given arguments for the current function (e.g ["NT","SA"])
             for currVal in values:
-                print self.funcList[k]
-                if(eval(self.funcList[k],varValue, individual[currVal]) == False):
+                code = "code="+self.funcList[k]
+                exec code
+                if(code(varValue, individual[currVal]) == False):
                     counter += 1
-
         return counter
 
 class Domain(object):
