@@ -91,7 +91,7 @@
       "CheckList": [
         {
           "Name" : "Different",
-          "ArgList" : ["NT","SA"]
+          "ArgList" : ["WA","SA","Q"]
         }
       ]
     },
@@ -105,7 +105,7 @@
       "CheckList": [
         {
           "Name" : "Different",
-          "ArgList" : ["NT","SA"]
+          "ArgList" : ["NT","SA","NSW"]
         }
       ]
     },
@@ -119,7 +119,7 @@
       "CheckList": [
         {
           "Name" : "Different",
-          "ArgList" : ["NT","SA"]
+          "ArgList" : ["WA","NT","Q","NSW","V"]
         }
       ]
     },
@@ -133,7 +133,7 @@
       "CheckList": [
         {
           "Name" : "Different",
-          "ArgList" : ["NT","SA"]
+          "ArgList" : ["Q","SA","V"]
         }
       ]
     },
@@ -147,7 +147,7 @@
       "CheckList": [
         {
           "Name" : "Different",
-          "ArgList" : ["NT","SA"]
+          "ArgList" : ["SA","NSW"]
         }
       ]
     },
@@ -158,12 +158,7 @@
           "Function" : "lambda x,y: x['Color']!=y['Color']"
         }
       ],
-      "CheckList": [
-        {
-          "Name" : "Different",
-          "ArgList" : ["NT","SA"]
-        }
-      ]
+      "CheckList": []
     }
   }
 }

@@ -1,18 +1,18 @@
 {
     "NSW": {
-        "Color": "Red"
+        "Color": "Blue"
     }, 
     "NT": {
-        "Color": "Red"
+        "Color": "Blue"
     }, 
     "Q": {
         "Color": "Green"
     }, 
     "SA": {
-        "Color": "Blue"
+        "Color": "Red"
     }, 
     "T": {
-        "Color": "Red"
+        "Color": "Green"
     }, 
     "V": {
         "Color": "Green"

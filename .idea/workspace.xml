@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="714aaf57-7ba7-45c1-bcb7-f230329a843a" name="Default" comment="Just testing pycharm built in git">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CSPSolver.iml" afterPath="$PROJECT_DIR$/.idea/CSPSolver.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py" afterPath="$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSPSolver/CSPSolver/data.json" afterPath="$PROJECT_DIR$/CSPSolver/CSPSolver/data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSPSolver/CSPSolver/result.json" afterPath="$PROJECT_DIR$/CSPSolver/CSPSolver/result.json" />
     </list>
     <ignored path="CSPSolver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,14 +31,66 @@
       <file leaf-file-name="CSPSolver.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7636719">
-              <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.5979827">
+              <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
               <folding>
-                <element signature="e#3459#4036#0" expanded="false" />
-                <element signature="e#4451#4455#0" expanded="false" />
-                <element signature="e#4493#4497#0" expanded="false" />
-                <element signature="e#4529#5326#0" expanded="false" />
-                <element signature="e#5354#5510#0" expanded="false" />
+                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#1898#1970#0" expanded="false" />
+                <element signature="e#2773#2927#0" expanded="false" />
+                <element signature="e#6160#6782#0" expanded="false" />
+                <element signature="e#6905#7224#0" expanded="false" />
+                <element signature="e#7259#7263#0" expanded="false" />
+                <element signature="e#7293#7297#0" expanded="false" />
+                <element signature="e#7405#7573#0" expanded="false" />
+                <marker date="1462285867356" expanded="false" signature="8620:8754" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CSPSolver/CSPSolver/data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.28">
+              <caret line="160" column="21" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
+              <folding>
+                <element signature="n#!!block;n#Vars#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#WA#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#NT#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Q#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#SA#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#NSW#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#V#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#T#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#WA#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Color#0;n#!!block;n#WA#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#NT#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Color#0;n#!!block;n#NT#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Q#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Color#0;n#!!block;n#Q#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#SA#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Color#0;n#!!block;n#SA#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#NSW#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Color#0;n#!!block;n#NSW#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#V#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Color#0;n#!!block;n#V#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#T#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#Color#0;n#!!block;n#T#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+                <element signature="e#1135#1256#0" expanded="false" />
+                <element signature="e#1145#1248#0" expanded="false" />
+                <element signature="e#1410#1531#0" expanded="false" />
+                <element signature="e#1420#1523#0" expanded="false" />
+                <element signature="e#1688#1809#0" expanded="false" />
+                <element signature="e#1698#1801#0" expanded="false" />
+                <element signature="e#1969#2090#0" expanded="false" />
+                <element signature="e#1979#2082#0" expanded="false" />
+                <element signature="e#2259#2380#0" expanded="false" />
+                <element signature="e#2269#2372#0" expanded="false" />
+                <element signature="e#2536#2657#0" expanded="false" />
+                <element signature="e#2546#2649#0" expanded="false" />
+                <element signature="e#2811#2932#0" expanded="false" />
+                <element signature="e#2821#2924#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -42,13 +99,24 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="maxlieb &lt;maxzemail@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/CSPSolver/CSPSolver/data.json" />
         <option value="$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py" />
       </list>
     </option>
@@ -56,8 +124,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -84,6 +152,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -126,8 +196,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -150,6 +218,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="806" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="SearchEverywhereHistoryKey" value="zoom&#9;null&#9;null" />
   </component>
   <component name="RunManager" selected="Python.CSPSolver">
     <configuration default="false" name="CSPSolver" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -158,9 +227,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Python27\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CSPSolver/CSPSolver" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSPSolver" />
@@ -311,23 +380,31 @@
       <option name="number" value="Default" />
       <updated>1457384715897</updated>
     </task>
+    <task id="LOCAL-00001" summary="Merge Fixes and saving&#10;(cherry picked from commit 1fdde9c)">
+      <created>1462276315359</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462276315360</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19316375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19316022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297362" sideWeight="0.50321543" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26814988" sideWeight="0.49678457" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3676815" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45416668" sideWeight="0.49678457" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33055556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48004562" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34166667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -336,18 +413,43 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Just testing pycharm built in git" />
-    <option name="LAST_COMMIT_MESSAGE" value="Just testing pycharm built in git" />
+    <MESSAGE value="Merge Fixes and saving&#10;(cherry picked from commit 1fdde9c)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge Fixes and saving&#10;(cherry picked from commit 1fdde9c)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint type="python-line">
+          <url>file://$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py</url>
+          <line>222</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py</url>
+          <line>219</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="25" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.funcList[k]" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py">
@@ -355,25 +457,131 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3459#4036#0" expanded="false" />
-            <element signature="e#4451#4455#0" expanded="false" />
-            <element signature="e#4493#4497#0" expanded="false" />
-            <element signature="e#4529#5326#0" expanded="false" />
-            <element signature="e#5354#5510#0" expanded="false" />
+            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#1898#1970#0" expanded="false" />
+            <element signature="e#2773#2927#0" expanded="false" />
+            <element signature="e#6160#6782#0" expanded="false" />
+            <element signature="e#6905#7224#0" expanded="false" />
+            <element signature="e#7259#7263#0" expanded="false" />
+            <element signature="e#7293#7297#0" expanded="false" />
+            <element signature="e#7405#7573#0" expanded="false" />
+            <marker date="1462285867356" expanded="false" signature="8620:8754" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7636719">
-          <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3459#4036#0" expanded="false" />
-            <element signature="e#4451#4455#0" expanded="false" />
-            <element signature="e#4493#4497#0" expanded="false" />
-            <element signature="e#4529#5326#0" expanded="false" />
-            <element signature="e#5354#5510#0" expanded="false" />
+            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#1898#1970#0" expanded="false" />
+            <element signature="e#2773#2927#0" expanded="false" />
+            <element signature="e#6160#6782#0" expanded="false" />
+            <element signature="e#6905#7224#0" expanded="false" />
+            <element signature="e#7259#7263#0" expanded="false" />
+            <element signature="e#7293#7297#0" expanded="false" />
+            <element signature="e#7405#7573#0" expanded="false" />
+            <marker date="1462285867356" expanded="false" signature="8620:8754" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#1898#1970#0" expanded="false" />
+            <element signature="e#2773#2927#0" expanded="false" />
+            <element signature="e#6160#6782#0" expanded="false" />
+            <element signature="e#6905#7224#0" expanded="false" />
+            <element signature="e#7259#7263#0" expanded="false" />
+            <element signature="e#7293#7297#0" expanded="false" />
+            <element signature="e#7405#7573#0" expanded="false" />
+            <marker date="1462285867356" expanded="false" signature="8620:8754" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/PyQt4/examples/threads/mandelbrot.pyw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33285302">
+          <caret line="322" column="8" selection-start-line="322" selection-start-column="8" selection-end-line="322" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSPSolver/CSPSolver/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.28">
+          <caret line="160" column="21" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!block;n#Vars#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#WA#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#NT#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Q#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#SA#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#NSW#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#V#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#T#0;n#!!block;n#Vars#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#WA#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Color#0;n#!!block;n#WA#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#NT#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Color#0;n#!!block;n#NT#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Q#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Color#0;n#!!block;n#Q#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#SA#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Color#0;n#!!block;n#SA#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#NSW#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Color#0;n#!!block;n#NSW#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#V#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Color#0;n#!!block;n#V#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#T#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#Color#0;n#!!block;n#T#0;n#!!block;n#Domains#0;n#!!top" expanded="false" />
+            <element signature="e#1135#1256#0" expanded="false" />
+            <element signature="e#1145#1248#0" expanded="false" />
+            <element signature="e#1410#1531#0" expanded="false" />
+            <element signature="e#1420#1523#0" expanded="false" />
+            <element signature="e#1688#1809#0" expanded="false" />
+            <element signature="e#1698#1801#0" expanded="false" />
+            <element signature="e#1969#2090#0" expanded="false" />
+            <element signature="e#1979#2082#0" expanded="false" />
+            <element signature="e#2259#2380#0" expanded="false" />
+            <element signature="e#2269#2372#0" expanded="false" />
+            <element signature="e#2536#2657#0" expanded="false" />
+            <element signature="e#2546#2649#0" expanded="false" />
+            <element signature="e#2811#2932#0" expanded="false" />
+            <element signature="e#2821#2924#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSPSolver/CSPSolver/result.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1590909">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSPSolver/CSPSolver/CSPSolver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5979827">
+          <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#1898#1970#0" expanded="false" />
+            <element signature="e#2773#2927#0" expanded="false" />
+            <element signature="e#6160#6782#0" expanded="false" />
+            <element signature="e#6905#7224#0" expanded="false" />
+            <element signature="e#7259#7263#0" expanded="false" />
+            <element signature="e#7293#7297#0" expanded="false" />
+            <element signature="e#7405#7573#0" expanded="false" />
+            <marker date="1462285867356" expanded="false" signature="8620:8754" placeholder="..." />
           </folding>
         </state>
       </provider>
