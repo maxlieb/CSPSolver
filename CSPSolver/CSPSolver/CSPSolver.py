@@ -3,6 +3,10 @@ from operator import add
 import copy
 from JsonLoader import JsonLoader
 
+
+
+
+
 class CSP(object):
     def __init__(self, path = None, varDict = None, domDict = None, constraintDict = None):
         if path == None:
@@ -44,7 +48,23 @@ class CSP(object):
     def solve(self, algorithm):
         if algorithm == "Genetic":
             return self.SolveGenetic()
-
+    #     if algorithm == "BackTrack":
+    #         return self.SolveBackTrack()
+    #
+    # def SolveBackTrack(self):
+    #     Solution = copy.deepcopy(self.varDict)
+    #     return self.BackTrack(Solution)
+    #
+    # def BackTrack(self,Solution):
+    #     if all(dict(Solution).values()):
+    #         return Solution
+    #     u_var=self.selectUnassignedVar()
+    #     for v in self.domDict[u_var]:
+    #         self.constraintDict[v].
+    #     return  None
+    #
+    # def selectUnassignedVar(self):
+    #     return None
 
     #Genetic Algorithm based solution implementation method
     def SolveGenetic(self, popSize=100):
@@ -236,6 +256,7 @@ a = CSP("data.json")
 result = a.solve("Genetic")
 
 JsonLoader.SaveOutputData(result)
+
 
 # class var(object):
 #     def __init__(self, value):
