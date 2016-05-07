@@ -24,6 +24,29 @@
     }, 
     {
         "NSW": {
+            "Color": "Red"
+        }, 
+        "NT": {
+            "Color": "Red"
+        }, 
+        "Q": {
+            "Color": "Green"
+        }, 
+        "SA": {
+            "Color": "Blue"
+        }, 
+        "T": {
+            "Color": "Red"
+        }, 
+        "V": {
+            "Color": "Green"
+        }, 
+        "WA": {
+            "Color": "Green"
+        }
+    }, 
+    {
+        "NSW": {
             "Color": "Blue"
         }, 
         "NT": {
@@ -36,7 +59,76 @@
             "Color": "Red"
         }, 
         "T": {
+            "Color": "Green"
+        }, 
+        "V": {
+            "Color": "Green"
+        }, 
+        "WA": {
+            "Color": "Green"
+        }
+    }, 
+    {
+        "NSW": {
             "Color": "Red"
+        }, 
+        "NT": {
+            "Color": "Red"
+        }, 
+        "Q": {
+            "Color": "Green"
+        }, 
+        "SA": {
+            "Color": "Blue"
+        }, 
+        "T": {
+            "Color": "Green"
+        }, 
+        "V": {
+            "Color": "Green"
+        }, 
+        "WA": {
+            "Color": "Green"
+        }
+    }, 
+    {
+        "NSW": {
+            "Color": "Blue"
+        }, 
+        "NT": {
+            "Color": "Blue"
+        }, 
+        "Q": {
+            "Color": "Green"
+        }, 
+        "SA": {
+            "Color": "Red"
+        }, 
+        "T": {
+            "Color": "Blue"
+        }, 
+        "V": {
+            "Color": "Green"
+        }, 
+        "WA": {
+            "Color": "Green"
+        }
+    }, 
+    {
+        "NSW": {
+            "Color": "Red"
+        }, 
+        "NT": {
+            "Color": "Red"
+        }, 
+        "Q": {
+            "Color": "Green"
+        }, 
+        "SA": {
+            "Color": "Blue"
+        }, 
+        "T": {
+            "Color": "Blue"
         }, 
         "V": {
             "Color": "Green"
