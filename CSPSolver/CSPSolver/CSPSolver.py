@@ -49,7 +49,7 @@ class CSP(object):
             return self.SolveBackTrack()
 
     def SolveBackTrack(self):        
-        return self.BackTrack([], copy.deepcopy(self.varDict),copy.deepcopy(self.domDict), False, False)
+        return self.BackTrack([], copy.deepcopy(self.varDict),copy.deepcopy(self.domDict), True, False)
 
     #region bactrack
     def BackTrack(self,Solutions, assignment, domains, forward_checking, single):
@@ -116,11 +116,11 @@ class CSP(object):
                         # for each variable
                         for X in assignment:
                             # for each of it's connected variables
-                            for k in self.constraintDict[X].checklist:
-                                for Y in self.constraintDict[X].checklist[k]:
+                            for conkey in self.constraintDict[X].checklist:
+                                for Y in self.constraintDict[X].checklist[conkey]:
                                     # if it's not assigned
                                     if not any(assignment[Y].values()):
-                                        domvals = self.getAllDomValues(Y,domains)
+                                        domvals = self.getAllDomValues(Y,domains_new)
                                         # for each value in domain test if it will work now...
                                         for key, vallist in domvals.iteritems():
                                             for val in vallist:
@@ -145,6 +145,7 @@ class CSP(object):
                                                                         dom.Ranges.remove(r)
                                                                         dom.Ranges.append((bkp[0],val))
                                                                         dom.Ranges.append((val,bkp[1]))
+                                                            #print "assignment:{0}, new domain for {1} is {2}".format([(i, assignment[i]['Color']) for i in assignment if assignment[i]['Color']], Y, dom.Values)
 
                                     
                                 
