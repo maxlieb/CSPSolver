@@ -55,7 +55,7 @@ class CSP(object):
     def BackTrack(self,Solutions, assignment, domains, forward_checking, single):
 
         # Check if solution found
-        if all([any(i.values()) for i in [val for val in assignment.values()]]):
+        if all([any(i.values()) for i in assignment.values()]):
             Solutions.append(copy.deepcopy(assignment))
             return Solutions
 
