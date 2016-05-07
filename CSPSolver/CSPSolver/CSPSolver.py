@@ -59,35 +59,65 @@ class CSP(object):
             Solutions.append(copy.deepcopy(assignment))
             return Solutions
 
+        # Calculate the total number of possible values from all of the domains for each variable
+        domSizes = {}
+        # for each variable
+        for var in self.domDict:
+            domSizes[var] = 0
+            # for each domain of that variable
+            for dom in self.domDict[var]:
+                # for values and ranges seperately
+                if dom.Values:
+                    domSizes[var]+= len(dom.Values)
+                if dom.Ranges:
+                    # for each range
+                    for r in dom.Ranges:
+                        domSizes[var]+=len(range(r[0],r[1]))
+
+        # same idea for constraints
+        checkSizes = {}
+        # fro each variable
+        for var in self.constraintDict:
+            checkSizes[var] = 0
+            # for each "checklist"
+            for chk in self.constraintDict[var].checklist:
+                checkSizes[var]+= len(self.constraintDict[var].checklist[chk])
+        
+        # Mix the Degree and Minimum Remaining Values (MRV) heuristics
+        lst = [(-checkSizes[var],domSizes[var],var) for var in domSizes]
+        lst.sort()
+        lst = [x[-1] for x in lst]        
+
         # get a un-assigned variable to assign
         u_var = None
-        for var in assignment:
+        for var in lst:
             if not any(assignment[var].values()):
                 u_var = var
                 break
 
         # attempt to find a suitable assignment
         for dom in self.domDict[u_var]:
-            for val in dom.Values:
+            allDomValues = []
+            if dom.Values:
+                allDomValues = copy.deepcopy(dom.Values)
+            if dom.Ranges:
+                for rangelist in dom.Ranges:
+                    for i in range(rangelist[0],rangelist[1]):
+                        allDomValues.append(i)
+            for val in allDomValues:
                 # Check the assignment
-                    testAssignment = copy.deepcopy(assignment)
-                    testAssignment[u_var][dom.AttributeInVar] = val
-                    result = self.constraintDict[u_var].Validate(testAssignment)
+                testAssignment = copy.deepcopy(assignment)
+                testAssignment[u_var][dom.AttributeInVar] = val
+                result = self.constraintDict[u_var].Validate(testAssignment)
 
-                    # if value fits ( no violations )
-                    if result == 0:
-                        assignment[u_var][dom.AttributeInVar] = val
-                        result = self.BackTrack(Solutions,assignment,False)
-                        #if not result:
-                        #    assignment[u_var][dom.AttributeInVar] = None
-                        if Solutions and single:
-                            return Solutions
-                        else:
-                            assignment[u_var][dom.AttributeInVar] = None
-                        #elif Solutions and result:
-                        #    assignment = copy.deepcopy(self.varDict)
-                        #    self.BackTrack(Solutions,assignment,False)
-
+                # if value fits ( no violations )
+                if result == 0:
+                    assignment[u_var][dom.AttributeInVar] = val
+                    result = self.BackTrack(Solutions,assignment,False)
+                    if Solutions and single:
+                        return Solutions
+                    else:
+                        assignment[u_var][dom.AttributeInVar] = None
         return Solutions
 
     #endregion

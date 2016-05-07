@@ -1,5 +1,5 @@
 {
-  "Vars" : {
+  "Vars": {
     "WA": {
       "Color": null
     },
@@ -22,47 +22,47 @@
       "Color": null
     }
   },
-  "Domains" : {
+  "Domains": {
     "WA": {
       "Color": {
-        "Ranges" : null,
-        "Values" : ["Red","Green","Blue"]
+        "Ranges": null,
+        "Values": [ "Red", "Green", "Blue" ]
       }
     },
     "NT": {
       "Color": {
-        "Ranges" : null,
-        "Values" : ["Red","Green","Blue"]
+        "Ranges": null,
+        "Values": [ "Red", "Green", "Blue" ]
       }
     },
     "Q": {
       "Color": {
-        "Ranges" : null,
-        "Values" : ["Red","Green","Blue"]
+        "Ranges": null,
+        "Values": [ "Red", "Green", "Blue" ]
       }
     },
     "SA": {
       "Color": {
-        "Ranges" : null,
-        "Values" : ["Red","Green","Blue"]
+        "Ranges": null,
+        "Values": [ "Red", "Green", "Blue" ]
       }
     },
     "NSW": {
       "Color": {
-        "Ranges" : null,
-        "Values" : ["Red","Green","Blue"]
+        "Ranges": null,
+        "Values": [ "Red", "Green", "Blue" ]
       }
     },
     "V": {
       "Color": {
-        "Ranges" : null,
-        "Values" : ["Red","Green","Blue"]
+        "Ranges": null,
+        "Values": [ "Red", "Green", "Blue" ]
       }
     },
     "T": {
       "Color": {
-        "Ranges" : null,
-        "Values" : ["Red","Green","Blue"]
+        "Ranges": null,
+        "Values": [ "Red", "Green", "Blue" ]
       }
     }
   },
