@@ -1,11 +1,8 @@
 from random import randint, random
 from operator import add
 import copy
+from collections import deque
 from JsonLoader import JsonLoader
-
-
-
-
 
 class CSP(object):
     def __init__(self, path = None, varDict = None, domDict = None, constraintDict = None):
@@ -48,25 +45,53 @@ class CSP(object):
     def solve(self, algorithm):
         if algorithm == "Genetic":
             return self.SolveGenetic()
-    #     if algorithm == "BackTrack":
-    #         return self.SolveBackTrack()
-    #
-    # def SolveBackTrack(self):
-    #     Solution = copy.deepcopy(self.varDict)
-    #     return self.BackTrack(Solution)
-    #
-    # def BackTrack(self,Solution):
-    #     if all(dict(Solution).values()):
-    #         return Solution
-    #     u_var=self.selectUnassignedVar()
-    #     for v in self.domDict[u_var]:
-    #         self.constraintDict[v].
-    #     return  None
-    #
-    # def selectUnassignedVar(self):
-    #     return None
+        if algorithm == "BackTrack":
+            return self.SolveBackTrack()
+
+    def SolveBackTrack(self):
+        Solutions = [copy.deepcopy(self.varDict)]
+        return self.BackTrack(Solutions, Solutions[0])
+
+    #Backtracking based implementation
+    #===========================================================================
+    def BackTrack(self,Solutions, assignment):
+
+        # Check if solution found
+        if all([any(i.values()) for i in [val for val in assignment.values()]]):
+            Solutions.append(assignment)
+            return Solutions
+
+        # get a un-assigned variable to assign
+        u_var = None
+        for var in assignment:
+            if not any(assignment[var].values()):
+                u_var = var
+                break
+
+        # attempt to find a suitable assignment
+        for d in self.domDict[u_var]:
+            for v in d.Values:
+                # Check the assignment
+                    testAssignment = copy.deepcopy(assignment)
+                    testAssignment[u_var][d.AttributeInVar] = v
+                    result = self.constraintDict[u_var].Validate(testAssignment)
+
+                    # if value fits ( no violations )
+                    if result == 0:
+                        assignment[u_var][d.AttributeInVar] = v
+                        result = self.BackTrack(Solutions,assignment)
+                        if result is not None:
+                            return Solutions
+                        else:
+                            assignment[u_var][d.AttributeInVar] = None
+        return None
+
+    #===========================================================================
+    #End Of Backtracking methods
+
 
     #Genetic Algorithm based solution implementation method
+    #===========================================================================
     def SolveGenetic(self, popSize=100):
         pop = self.population(popSize)
         isSolved = False
@@ -87,8 +112,6 @@ class CSP(object):
         else:
             for datum in self.fitness_history:
                 print "**{0}".format([datum])
-
-
 
     def grade(self,pop):
         # 'Find average fitness for a population.'
@@ -174,6 +197,8 @@ class CSP(object):
                     individual[varName][currDom.AttributeInVar] = self.getRandomValue(currDom)
             pop.append(individual)
         return pop
+    #===========================================================================
+    #End Of Genetic Algorithm methods
 
     # Generates a random value from a given domain
     def getRandomValue(self, domain):
@@ -234,10 +259,14 @@ class Constraint(object):
         # pass over the functions to check (e.g "Different")
         for k,values in self.checklist.iteritems():
             # pass over the given arguments for the current function (e.g ["NT","SA"])
-            for currVal in values:
-                code = "code="+self.funcList[k]
-                exec code
-                if(code(varValue, individual[currVal]) == False):
+            code = "code=" + self.funcList[k]
+            exec code
+            if values:
+                for currVal in values:
+                    if(code(varValue, individual[currVal]) == False):
+                        counter += 1
+            elif code:
+                if (code(varValue) == False):
                     counter += 1
 
         return counter
@@ -253,7 +282,11 @@ class Domain(object):
 global a
 a = CSP("data.json")
 
-result = a.solve("Genetic")
+result = a.solve("BackTrack")
+for assign in result:
+    for v in assign:
+        print  v + " " + assign[v]["Color"]
+    print "===================================="
 
 JsonLoader.SaveOutputData(result)
 

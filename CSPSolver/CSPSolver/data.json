@@ -66,18 +66,27 @@
       }
     }
   },
+
   "Constraints" : {
     "WA": {
       "FuncList": [
         {
           "Name" : "Different",
           "Function" : "lambda x,y: x['Color']!=y['Color']"
+        },
+        {
+          "Name" : "ISGreen",
+          "Function" : "lambda x: x['Color']=='Green'"
         }
       ],
       "CheckList": [
         {
           "Name" : "Different",
           "ArgList" : ["NT","SA"]
+        },
+        {
+          "Name" : "ISGreen",
+          "ArgList" : []
         }
       ]
     },

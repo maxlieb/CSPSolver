@@ -23,6 +23,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CSPSolver.py" />
+    <Compile Include="JsonLoader.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data.json" />
+    <Content Include="result.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
