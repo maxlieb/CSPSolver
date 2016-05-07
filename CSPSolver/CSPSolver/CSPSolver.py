@@ -49,10 +49,10 @@ class CSP(object):
             return self.SolveBackTrack()
 
     def SolveBackTrack(self):        
-        return self.BackTrack([], copy.deepcopy(self.varDict), False)
+        return self.BackTrack([], copy.deepcopy(self.varDict),copy.deepcopy(self.domDict), False, False)
 
     #region bactrack
-    def BackTrack(self,Solutions, assignment, single):
+    def BackTrack(self,Solutions, assignment, domains, forward_checking, single):
 
         # Check if solution found
         if all([any(i.values()) for i in [val for val in assignment.values()]]):
@@ -62,10 +62,10 @@ class CSP(object):
         # Calculate the total number of possible values from all of the domains for each variable
         domSizes = {}
         # for each variable
-        for var in self.domDict:
+        for var in domains:
             domSizes[var] = 0
             # for each domain of that variable
-            for dom in self.domDict[var]:
+            for dom in domains[var]:
                 # for values and ranges seperately
                 if dom.Values:
                     domSizes[var]+= len(dom.Values)
@@ -76,7 +76,7 @@ class CSP(object):
 
         # same idea for constraints
         checkSizes = {}
-        # fro each variable
+        # for each variable
         for var in self.constraintDict:
             checkSizes[var] = 0
             # for each "checklist"
@@ -96,29 +96,75 @@ class CSP(object):
                 break
 
         # attempt to find a suitable assignment
-        for dom in self.domDict[u_var]:
-            allDomValues = []
-            if dom.Values:
-                allDomValues = copy.deepcopy(dom.Values)
-            if dom.Ranges:
-                for rangelist in dom.Ranges:
-                    for i in range(rangelist[0],rangelist[1]):
-                        allDomValues.append(i)
-            for val in allDomValues:
+        allDomValues = self.getAllDomValues(u_var,domains)
+        # for each key (attribute in variable) and variable list in all domain values
+        for k,l in allDomValues.iteritems():
+            # and for each variable in that list
+            for val in l:
                 # Check the assignment
                 testAssignment = copy.deepcopy(assignment)
-                testAssignment[u_var][dom.AttributeInVar] = val
+                testAssignment[u_var][k] = val
                 result = self.constraintDict[u_var].Validate(testAssignment)
 
                 # if value fits ( no violations )
-                if result == 0:
-                    assignment[u_var][dom.AttributeInVar] = val
-                    result = self.BackTrack(Solutions,assignment,False)
+                if result == 0:                    
+                    assignment[u_var][k] = val
+                    
+                    # do forward checking domain optimitation
+                    domains_new = copy.deepcopy(domains)
+                    if forward_checking:
+                        # for each variable
+                        for X in assignment:
+                            # for each of it's connected variables
+                            for k in self.constraintDict[X].checklist:
+                                for Y in self.constraintDict[X].checklist[k]:
+                                    # if it's not assigned
+                                    if not any(assignment[Y].values()):
+                                        domvals = self.getAllDomValues(Y,domains)
+                                        # for each value in domain test if it will work now...
+                                        for key, vallist in domvals.iteritems():
+                                            for val in vallist:
+                                                # Check the assignment
+                                                testAssignment = copy.deepcopy(assignment)
+                                                testAssignment[Y][key] = val
+                                                result = self.constraintDict[Y].Validate(testAssignment)
+                                                
+                                                # remove from domains
+                                                if result > 0:
+                                                    # find the domain in new domain structure
+                                                    for dom in domains_new[Y]:
+                                                        if dom.AttributeInVar == key:
+                                                            # remove the value
+                                                            if dom.Values and val in dom.Values:
+                                                                dom.Values.remove(val)
+                                                            elif dom.Ranges:
+                                                                # re-shape ranges to exclude the value                                                                
+                                                                for r in dom.Ranges:
+                                                                    if r[0] > val and [1] < val:
+                                                                        bkp = copy.deepcopy(r)
+                                                                        dom.Ranges.remove(r)
+                                                                        dom.Ranges.append((bkp[0],val))
+                                                                        dom.Ranges.append((val,bkp[1]))
+
+                                    
+                                
+                    result = self.BackTrack(Solutions,assignment,domains_new,forward_checking,single)
                     if Solutions and single:
                         return Solutions
                     else:
-                        assignment[u_var][dom.AttributeInVar] = None
+                        assignment[u_var][k] = None
         return Solutions
+    def getAllDomValues(self, u_var ,domains):
+        for dom in domains[u_var]:
+            allDomValues = {}
+            allDomValues[dom.AttributeInVar] = []
+            if dom.Values:
+                allDomValues[dom.AttributeInVar] = copy.deepcopy(dom.Values)
+            if dom.Ranges:
+                for rangelist in dom.Ranges:
+                    for i in range(rangelist[0],rangelist[1]):
+                        allDomValues[dom.AttributeInVar].append(i)
+        return allDomValues
 
     #endregion
 
