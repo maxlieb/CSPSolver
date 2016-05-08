@@ -1,4 +1,4 @@
-from random import randint, random
+from random import randint, random, choice
 from operator import add
 import copy
 from collections import deque
@@ -42,13 +42,15 @@ class CSP(object):
                 self.constraintDict[currVar] = Constraint(self.varDict, currVar, formattedFuncDict, formattedChecksDict)
         self.fitness_history = []
 
-    def solve(self, algorithm):
+    def solve(self, algorithm, single = False, forward_checking = True, MaxSteps = 1000):
         if algorithm == "Genetic":
             return self.SolveGenetic()
         if algorithm == "BackTrack":
-            return self.SolveBackTrack()
+            return self.SolveBackTrack(forward_checking, single)
+        if algorithm == "MinConflicts":
+            return self.MinConflicts(MaxSteps)
 
-    def SolveBackTrack(self):        
+    def SolveBackTrack(self, forward_checking, single):        
         return self.BackTrack([], copy.deepcopy(self.varDict),copy.deepcopy(self.domDict), True, False)
 
     #region bactrack
@@ -167,6 +169,42 @@ class CSP(object):
                         allDomValues[dom.AttributeInVar].append(i)
         return allDomValues
 
+    #endregion
+
+    #region MinConflicts
+    def MinConflicts(self,MaxSteps = 1000):
+        # Generate some assignment
+        assignment = copy.deepcopy(self.varDict)
+        for varName in assignment:
+            for currDom in self.domDict[varName]:
+                assignment[varName][currDom.AttributeInVar] = self.getRandomValue(currDom)
+        # Do up to MaxSteps iterations of the algorithm
+        for _ in xrange(MaxSteps):
+            # Check if assignment is valid
+            confVarlist = self.GlobalValidate(assignment,True)
+            if len(confVarlist) == 0:
+                return assignment
+            else:
+                # select a random variable to cahnge
+                rndConfVar = choice(confVarlist)
+                # try all values form his domain and try if the cause less conflicts
+                allDomValues = self.getAllDomValues(rndConfVar,self.domDict)
+                min = 999
+                minval = None
+                minatt = None
+                for k,valList in allDomValues.iteritems():
+                    for val in valList:
+                        testAssignment = copy.deepcopy(assignment)
+                        testAssignment[rndConfVar][k] = val
+                        result = self.constraintDict[rndConfVar].Validate(testAssignment)
+                        if result < min:
+                            min = result
+                            minval = val 
+                            minatt = k
+                # assign the new, less conflictd value
+                assignment[rndConfVar][minatt] = minval            
+
+        return None
     #endregion
 
     #region genetic    
@@ -300,18 +338,18 @@ class CSP(object):
         return val
 
     # Call all variables validation methods and collect results
-    def GlobalValidate(self, individual = None):
+    def GlobalValidate(self, individual = None, getConflictedList=False):
         if (individual == None):
-            individual = self.varDict
+            individual = copy.deepcopy(self.varDict)
         sum = 0
-
+        clist = []
         for k,val in self.constraintDict.iteritems():
-
-            sum += val.Validate(individual)
-            #print k, val.Validate(individual)
-        if sum ==None:
-            print "From GlobalValidate None found"
-
+            ret = val.Validate(individual)
+            sum += ret
+            if ret > 0:
+                clist.append(k)
+        if getConflictedList:
+            return clist
         return sum
 
     def Randomize(self):
@@ -363,7 +401,9 @@ class Domain(object):
 global a
 a = CSP("data.json")
 
-result = a.solve("BackTrack")
+#result = a.solve("BackTrack")
+#result = a.solve("Genetic")
+result = a.solve("MinConflicts")
 for assign in result:
     for v in assign:
         print  v + " " + assign[v]["Color"]
