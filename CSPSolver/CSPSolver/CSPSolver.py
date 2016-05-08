@@ -190,17 +190,24 @@ class CSP(object):
                 # try all values form his domain and try if the cause less conflicts
                 allDomValues = self.getAllDomValues(rndConfVar,self.domDict)
                 min = 999
-                minval = None
-                minatt = None
+                minvalues = {}
                 for k,valList in allDomValues.iteritems():
                     for val in valList:
                         testAssignment = copy.deepcopy(assignment)
                         testAssignment[rndConfVar][k] = val
                         result = self.constraintDict[rndConfVar].Validate(testAssignment)
+                        if result == min:
+                            if not minvalues[k]:
+                                minvalues[k] = []
+                            minvalues[k].append(val)
                         if result < min:
                             min = result
-                            minval = val 
-                            minatt = k
+                            minvalues = {}
+                            minvalues[k] = []
+                            minvalues[k].append(val)
+                            
+                minatt = choice(minvalues.keys())
+                minval = choice(minvalues[minatt])
                 # assign the new, less conflictd value
                 assignment[rndConfVar][minatt] = minval            
 
@@ -401,13 +408,19 @@ class Domain(object):
 global a
 a = CSP("data.json")
 
-#result = a.solve("BackTrack")
-#result = a.solve("Genetic")
-result = a.solve("MinConflicts")
-for assign in result:
-    for v in assign:
-        print  v + " " + assign[v]["Color"]
-    print "===================================="
+#alg = "BackTrack"
+#alg = "Genetic"
+alg = "MinConflicts"
+result = a.solve(alg)
+
+if alg == "BackTrack":
+    for assign in result:
+        for v in assign:
+            print  v + " " + assign[v]["Color"]
+        print "===================================="
+else:
+    for k,v in result.iteritems():
+        print k,v.values()
 
 JsonLoader.SaveOutputData(result)
 
