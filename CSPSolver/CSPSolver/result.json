@@ -1,140 +1,128 @@
 [
     {
-        "NSW": {
-            "Color": "Blue"
+        "\u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9\u05dd \u05d5\u05e9\u05e4\u05d5\u05ea \u05e4\u05d5\u05e8\u05de\u05d0\u05dc\u05d9\u05d5\u05ea": {
+            "Time": "Jun 07 2016 09:00", 
+            "Year": 2
         }, 
-        "NT": {
-            "Color": "Blue"
+        "\u05d0\u05dc\u05d2\u05d1\u05e8\u05d4 \u05dc\u05d9\u05e0\u05d9\u05d0\u05e8\u05d9\u05ea": {
+            "Time": "Jun 07 2016 09:00", 
+            "Year": 1
         }, 
-        "Q": {
-            "Color": "Green"
+        "\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd I": {
+            "Time": "Jun 12 2016 09:00", 
+            "Year": 2
         }, 
-        "SA": {
-            "Color": "Red"
+        "\u05d0\u05dc\u05d2\u05d5\u05e8\u05d9\u05ea\u05de\u05d9\u05dd II": {
+            "Time": "Jun 07 2016 09:00", 
+            "Year": 4
         }, 
-        "T": {
-            "Color": "Red"
+        "\u05d0\u05de\u05d9\u05e0\u05d5\u05ea": {
+            "Time": "Jun 12 2016 09:00", 
+            "Year": 4
         }, 
-        "V": {
-            "Color": "Green"
+        "\u05d0\u05e0\u05dc\u05d9\u05d6\u05d4 \u05e0\u05d5\u05de\u05e8\u05d9\u05ea": {
+            "Time": "Jun 07 2016 10:00", 
+            "Year": 3
         }, 
-        "WA": {
-            "Color": "Green"
-        }
-    }, 
-    {
-        "NSW": {
-            "Color": "Blue"
+        "\u05d0\u05e8\u05db\u05d9\u05d8\u05e7\u05d8\u05d5\u05e8\u05ea \u05de\u05d7\u05e9\u05d1\u05d9\u05dd I": {
+            "Time": "Jun 12 2016 10:00", 
+            "Year": 1
         }, 
-        "NT": {
-            "Color": "Blue"
+        "\u05d0\u05e8\u05db\u05d9\u05d8\u05e7\u05d8\u05d5\u05e8\u05ea \u05de\u05d7\u05e9\u05d1\u05d9\u05dd II": {
+            "Time": "Jun 16 2016 10:00", 
+            "Year": 1
         }, 
-        "Q": {
-            "Color": "Green"
+        "\u05d1\u05d3\u05d9\u05e7\u05d5\u05ea \u05d5\u05d0\u05d9\u05db\u05d5\u05ea \u05d1\u05d4\u05e0\u05d3\u05e1\u05ea \u05ea\u05d5\u05db\u05e0\u05d4": {
+            "Time": "Jun 12 2016 10:00", 
+            "Year": 3
         }, 
-        "SA": {
-            "Color": "Red"
+        "\u05d1\u05d8\u05d9\u05d7\u05d5\u05ea \u05ea\u05d5\u05db\u05e0\u05d4": {
+            "Time": "Jun 16 2016 10:00", 
+            "Year": 4
         }, 
-        "T": {
-            "Color": "Green"
+        "\u05d1\u05e1\u05d9\u05e1\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd": {
+            "Time": "Jun 16 2016 11:00", 
+            "Year": 3
         }, 
-        "V": {
-            "Color": "Green"
+        "\u05d7\u05d3\u05d5\"\u05d0 \u05de 1": {
+            "Time": "Jun 20 2016 11:00", 
+            "Year": 1
         }, 
-        "WA": {
-            "Color": "Green"
-        }
-    }, 
-    {
-        "NSW": {
-            "Color": "Blue"
+        "\u05d7\u05d3\u05d5\"\u05d0 \u05de 2": {
+            "Time": "Jun 24 2016 11:00", 
+            "Year": 1
         }, 
-        "NT": {
-            "Color": "Blue"
+        "\u05d7\u05d9\u05e9\u05d5\u05d1\u05d9\u05d5\u05ea \u05d5\u05e1\u05d9\u05d1\u05d5\u05db\u05d9\u05d5\u05ea": {
+            "Time": "Jun 20 2016 11:00", 
+            "Year": 3
         }, 
-        "Q": {
-            "Color": "Green"
+        "\u05d9\u05e1\u05d5\u05d3\u05d5\u05ea \u05d4\u05e0\u05d3\u05e1\u05ea \u05ea\u05d5\u05db\u05e0\u05d4": {
+            "Time": "Jun 16 2016 11:00", 
+            "Year": 2
         }, 
-        "SA": {
-            "Color": "Red"
+        "\u05dc\u05d5\u05d2\u05d9\u05e7\u05d4 \u05d5\u05e0\u05d5\u05e9\u05d0\u05d9\u05dd \u05d3\u05d9\u05e1\u05e7\u05e8\u05d8\u05d9\u05d9\u05dd I": {
+            "Time": "Jun 28 2016 12:00", 
+            "Year": 1
         }, 
-        "T": {
-            "Color": "Blue"
+        "\u05dc\u05d5\u05d2\u05d9\u05e7\u05d4 \u05d5\u05e0\u05d5\u05e9\u05d0\u05d9\u05dd \u05d3\u05d9\u05e1\u05e7\u05e8\u05d8\u05d9\u05d9\u05dd II": {
+            "Time": "Jun 20 2016 12:00", 
+            "Year": 2
         }, 
-        "V": {
-            "Color": "Green"
+        "\u05de\u05d1\u05d5\u05d0 \u05dc\u05d4\u05e1\u05ea\u05d1\u05e8\u05d5\u05ea \u05d5\u05e1\u05d8\u05d8\u05d9\u05e1\u05d8\u05d9\u05e7\u05d4": {
+            "Time": "Jun 24 2016 12:00", 
+            "Year": 2
         }, 
-        "WA": {
-            "Color": "Green"
-        }
-    }, 
-    {
-        "NSW": {
-            "Color": "Red"
+        "\u05de\u05d1\u05d5\u05d0 \u05dc\u05de\u05d3\u05e2\u05d9 \u05d4\u05de\u05d7\u05e9\u05d1": {
+            "Time": "Jul 03 2016 12:00", 
+            "Year": 1
         }, 
-        "NT": {
-            "Color": "Red"
+        "\u05de\u05d1\u05d5\u05d0 \u05dc\u05e7\u05d5\u05de\u05e4\u05d9\u05dc\u05e6\u05d9\u05d4": {
+            "Time": "Jun 24 2016 12:00", 
+            "Year": 3
         }, 
-        "Q": {
-            "Color": "Green"
+        "\u05de\u05d1\u05d5\u05d0 \u05dc\u05ea\u05e7\u05e9\u05d5\u05e8\u05ea \u05de\u05d7\u05e9\u05d1\u05d9\u05dd": {
+            "Time": "Jun 28 2016 13:00", 
+            "Year": 3
         }, 
-        "SA": {
-            "Color": "Blue"
+        "\u05de\u05d1\u05e0\u05d9 \u05e0\u05ea\u05d5\u05e0\u05d9\u05dd": {
+            "Time": "Jun 28 2016 13:00", 
+            "Year": 2
         }, 
-        "T": {
-            "Color": "Red"
+        "\u05de\u05e2\u05e8\u05db\u05d5\u05ea \u05d4\u05e4\u05e2\u05dc\u05d4": {
+            "Time": "Jul 03 2016 13:00", 
+            "Year": 3
         }, 
-        "V": {
-            "Color": "Green"
+        "\u05e0\u05d9\u05d4\u05d5\u05dc \u05e4\u05e8\u05d5\u05d9\u05e7\u05d8 \u05ea\u05d5\u05db\u05e0\u05d4": {
+            "Time": "Jul 03 2016 13:00", 
+            "Year": 2
         }, 
-        "WA": {
-            "Color": "Green"
-        }
-    }, 
-    {
-        "NSW": {
-            "Color": "Red"
+        "\u05e0\u05d9\u05ea\u05d5\u05d7 \u05d5\u05e2\u05d9\u05e6\u05d5\u05d1 \u05d1\u05d4\u05e0\u05d3\u05e1\u05ea \u05ea\u05d5\u05db\u05e0\u05d4": {
+            "Time": "Jul 07 2016 13:00", 
+            "Year": 2
         }, 
-        "NT": {
-            "Color": "Red"
+        "\u05e2\u05e7\u05e8\u05d5\u05e0\u05d5\u05ea \u05e9\u05e4\u05d5\u05ea \u05ea\u05d5\u05db\u05e0\u05d4": {
+            "Time": "Jul 11 2016 14:00", 
+            "Year": 2
         }, 
-        "Q": {
-            "Color": "Green"
+        "\u05e4\u05d9\u05d6\u05d9\u05e7\u05d4 \u05dc\u05d4\u05e0\u05d3\u05e1\u05ea \u05ea\u05d5\u05db\u05e0\u05d4": {
+            "Time": "Jul 07 2016 14:00", 
+            "Year": 1
         }, 
-        "SA": {
-            "Color": "Blue"
+        "\u05e7\u05d5\u05de\u05e4\u05d9\u05dc\u05e6\u05d9\u05d4": {
+            "Time": "Jul 07 2016 14:00", 
+            "Year": 3
         }, 
-        "T": {
-            "Color": "Green"
+        "\u05e8\u05e9\u05ea\u05d5\u05ea \u05ea\u05e7\u05e9\u05d5\u05e8\u05ea \u05de\u05d7\u05e9\u05d1\u05d9\u05dd": {
+            "Time": "Jul 11 2016 14:00", 
+            "Year": 3
         }, 
-        "V": {
-            "Color": "Green"
+        "\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd": {
+            "Time": "Jul 11 2016 14:00", 
+            "Year": 1
         }, 
-        "WA": {
-            "Color": "Green"
-        }
-    }, 
-    {
-        "NSW": {
-            "Color": "Red"
-        }, 
-        "NT": {
-            "Color": "Red"
-        }, 
-        "Q": {
-            "Color": "Green"
-        }, 
-        "SA": {
-            "Color": "Blue"
-        }, 
-        "T": {
-            "Color": "Blue"
-        }, 
-        "V": {
-            "Color": "Green"
-        }, 
-        "WA": {
-            "Color": "Green"
+        "\u05ea\u05db\u05e0\u05d5\u05ea \u05de\u05d5\u05e0\u05d7\u05d4 \u05e2\u05e6\u05de\u05d9\u05dd \u05de\u05ea\u05e7\u05d3\u05dd": {
+            "Time": "Jul 15 2016 15:00", 
+            "Year": 2
         }
     }
 ]

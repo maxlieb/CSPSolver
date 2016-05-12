@@ -1,8 +1,67 @@
 from random import randint, random, choice
 from operator import add
 import copy
-from collections import deque
 from JsonLoader import JsonLoader
+from dateutil.rrule import *
+from datetime import datetime, timedelta
+
+def strToTime(str):
+    return datetime.strptime(str, '%b %d %Y %H:%M')
+def strToDay(str):
+    return datetime.strptime(str, '%b %d %Y %H:%M').replace(hour=0, minute=0)
+def timeToStr(t):
+    return t.strftime("%b %d %Y %H:%M")
+"""
+Function to handle date ranges
+Input is a tuple of this form: (start date, end date, interval in minutes, excluded week days, work hours, work minutes)
+    The first 3 are mandatory, first 2 will have this form:
+        mmm dd YYYY HH:MM
+        for example: 'Jun 7 2016  9:00'
+    The third will be a the number of minutes separating each value in the output range list.
+        Example: 60 will give a value for every hour
+    The forth member is a comma separated list of days to exclude, for example : "SA, FR"
+        The following short week day names must be used: SU, MO, TU, WE, TH, FR, SA
+    The fifth member is a a string of the form "HH-HH" the represents business
+    hours range in 24 hour format. range includes end hour.
+        Example: '9-18'
+    The last one is similar to work hours and defines minutes after start hour and end hour
+"""
+def getdaterangegen(timerange, cache=None):
+    start_date = strToTime(timerange[0]) #datetime.strptime(timerange[0], '%b %d %Y %H:%M')
+    end_date = strToTime(timerange[1]) #datetime.strptime(timerange[1], '%b %d %Y %H:%M')
+    interval = timerange[2]
+    week_days = {"SU": SU, "MO": MO, "TU": TU, "WE": WE, "TH": TH, "FR": FR, "SA": SA}
+    if len(timerange) > 3 and timerange[3]:
+        for day in [x.replace(" ", "") for x in str(timerange[3]).split(",")]:
+            del week_days[day]
+    hours = range(0, 24)
+    if len(timerange) > 4 and timerange[4]:
+        rangebounds = [int(x) for x in str(timerange[4]).split("-")]
+        hours = range(rangebounds[0], rangebounds[1]+1)
+    minutes = range(0, 60)
+    if len(timerange) > 5 and timerange[5]:
+        rangebounds = [int(x) for x in str(timerange[5]).split("-")]
+        minutes = range(rangebounds[0], rangebounds[1] + 1)
+    times = rrule(MINUTELY,
+                  dtstart=start_date,
+                  until=end_date,
+                  byweekday=week_days.values(),
+                  byhour=hours,
+                  byminute=minutes,
+                  interval= interval, cache=True)
+    for single_date in times:
+        yield timeToStr(single_date)#single_date.strftime("%b %d %Y %H:%M")
+
+def getdaterange(timerange, cache=None):
+        key = timerange[0] + timerange[1]
+        if cache and len(cache) > 0:            
+            if cache[key]:
+                return cache[key]
+
+        res = [x for x in getdaterangegen(timerange)]
+        if cache == {} or (cache and len(cache) > 0):
+            cache[key] = copy.deepcopy(res)
+        return copy.deepcopy(res)
 
 class CSP(object):
     def __init__(self, path = None, varDict = None, domDict = None, constraintDict = None):
@@ -41,6 +100,7 @@ class CSP(object):
                     formattedChecksDict[c["Name"]] = c["ArgList"]
                 self.constraintDict[currVar] = Constraint(self.varDict, currVar, formattedFuncDict, formattedChecksDict)
         self.fitness_history = []
+        self.dateRangeCache = {}
 
     def solve(self, algorithm, single = False, forward_checking = True, MaxSteps = 1000):
         if algorithm == "Genetic":
@@ -51,13 +111,13 @@ class CSP(object):
             return self.MinConflicts(MaxSteps)
 
     def SolveBackTrack(self, forward_checking, single):        
-        return self.BackTrack([], copy.deepcopy(self.varDict),copy.deepcopy(self.domDict), True, False)
+        return self.BackTrack([], copy.deepcopy(self.varDict),copy.deepcopy(self.domDict), forward_checking, single)
 
     #region bactrack
     def BackTrack(self,Solutions, assignment, domains, forward_checking, single):
 
         # Check if solution found
-        if all([any(i.values()) for i in assignment.values()]):
+        if all([all(i.values()) for i in assignment.values()]):
             Solutions.append(copy.deepcopy(assignment))
             return Solutions
 
@@ -74,7 +134,11 @@ class CSP(object):
                 if dom.Ranges:
                     # for each range
                     for r in dom.Ranges:
-                        domSizes[var]+=len(range(r[0],r[1]))
+                        try:
+                            int (r[0])
+                            domSizes[var]+=len(range(r[0],r[1]))
+                        except ValueError:
+                            domSizes[var]+=len(getdaterange(r, self.dateRangeCache))
 
         # same idea for constraints
         checkSizes = {}
@@ -93,7 +157,7 @@ class CSP(object):
         # get a un-assigned variable to assign
         u_var = None
         for var in lst:
-            if not any(assignment[var].values()):
+            if not all(assignment[var].values()):
                 u_var = var
                 break
 
@@ -121,7 +185,7 @@ class CSP(object):
                             for conkey in self.constraintDict[X].checklist:
                                 for Y in self.constraintDict[X].checklist[conkey]:
                                     # if it's not assigned
-                                    if not any(assignment[Y].values()):
+                                    if Y!= "*" and not any(assignment[Y].values()):
                                         domvals = self.getAllDomValues(Y,domains_new)
                                         # for each value in domain test if it will work now...
                                         for key, vallist in domvals.iteritems():
@@ -164,9 +228,13 @@ class CSP(object):
             if dom.Values:
                 allDomValues[dom.AttributeInVar] = copy.deepcopy(dom.Values)
             if dom.Ranges:
-                for rangelist in dom.Ranges:
-                    for i in range(rangelist[0],rangelist[1]):
-                        allDomValues[dom.AttributeInVar].append(i)
+                for r in dom.Ranges:
+                    try:
+                        int(r[0])
+                        for i in range(r[0], r[1]):
+                            allDomValues[dom.AttributeInVar].append(i)
+                    except ValueError:
+                        allDomValues[dom.AttributeInVar] = getdaterange(r, self.dateRangeCache)
         return allDomValues
 
     #endregion
@@ -182,6 +250,7 @@ class CSP(object):
         for _ in xrange(MaxSteps):
             # Check if assignment is valid
             confVarlist = self.GlobalValidate(assignment,True)
+            print "Conflicts:{0}".format(len(confVarlist))
             if len(confVarlist) == 0:
                 return assignment
             else:
@@ -319,6 +388,7 @@ class CSP(object):
                 for currDom in self.domDict[varName]:
                     individual[varName][currDom.AttributeInVar] = self.getRandomValue(currDom)
             pop.append(individual)
+            print "Generated {0}".format(len(pop))
         return pop
     #endregion
 
@@ -337,8 +407,14 @@ class CSP(object):
             rangeOrValue = "Ranges"
 
         if rangeOrValue == "Ranges":
-            range = domain.Ranges[randint(0,len(domain.Ranges)-1)]
-            val = range[randint(0,len(range)-1)]
+            r = domain.Ranges[randint(0, len(domain.Ranges)-1)]
+            try:
+                test = int(r[0])
+                r= range(r[0],r[1]+1)
+                val = r[randint(0, len(r)-1)]
+            except ValueError:
+                times = getdaterange(r, self.dateRangeCache)
+                val = times[randint(0, len(times)-1)]
         else:
             val = domain.Values[randint(0,len(domain.Values)-1)]
 
@@ -357,13 +433,9 @@ class CSP(object):
                 clist.append(k)
         if getConflictedList:
             return clist
+        print sum
         return sum
 
-    def Randomize(self):
-        pass
-
-    def Next(self):
-        pass
 #endregion
 
 class Constraint(object):
@@ -376,6 +448,9 @@ class Constraint(object):
     def Validate(self, individual = None):
         counter = 0
         varValue = individual[self.varKey]
+        allOthers = copy.deepcopy(individual)
+        del allOthers[self.varKey]
+
 
         if (individual == None):
             individual = self.varDict
@@ -385,11 +460,14 @@ class Constraint(object):
             code = "code=" + self.funcList[k]
             exec code
             #if checks are in raletion to other variables
-            if values:             
+            if values and values[0] != "*":
                 #check for each variable related
                 for currVal in values:
                     if(code(varValue, individual[currVal]) == False):
                         counter += 1
+            # if in relation to all others
+            elif values and values[0] == "*":
+                counter += code(varValue, allOthers.values())
             #if checks are considering only the this variable
             elif code:
                 if (code(varValue) == False):
@@ -406,23 +484,18 @@ class Domain(object):
 
 # Create and init the Australian Map CSP
 global a
-a = CSP("data.json")
+a = CSP("examdata2.json")
 
-#alg = "BackTrack"
+alg = "BackTrack"
 #alg = "Genetic"
-alg = "MinConflicts"
-result = a.solve(alg)
-
-if alg == "BackTrack":
-    for assign in result:
-        for v in assign:
-            print  v + " " + assign[v]["Color"]
-        print "===================================="
-else:
-    for k,v in result.iteritems():
-        print k,v.values()
-
+#alg = "MinConflicts"
+result = a.solve(alg, True)
 JsonLoader.SaveOutputData(result)
+
+for k,v in result.iteritems():
+    print k,v.values()
+
+
 
 #region old
 # class var(object):
