@@ -1,333 +1,333 @@
 {
 	"Vars": {
-		"ארכיטקטורת מחשבים II": {
+		"Computer Architecture pt.2": {
 			"Year": 1,
 			"Time": null
 		},
-		"ארכיטקטורת מחשבים I": {
+		"Computer Architecture pt.1": {
 			"Year": 1,
 			"Time": null
 		},
-		"פיזיקה להנדסת תוכנה": {
+		"Physics for software engeneres": {
 			"Year": 1,
 			"Time": null
 		},
-		"חדו\"א מ 1": {
+		"Calculus 1": {
 			"Year": 1,
 			"Time": null
 		},
-		"חדו\"א מ 2": {
+		"Calculus 2": {
 			"Year": 1,
 			"Time": null
 		},
-		"מבוא למדעי המחשב": {
+		"Introduction to computer science": {
 			"Year": 1,
 			"Time": null
 		},
-		"תכנות מונחה עצמים": {
+		"Object oriented programming": {
 			"Year": 1,
 			"Time": null
 		},
-		"לוגיקה ונושאים דיסקרטיים I": {
+		"Logic and discrete topics pt.1": {
 			"Year": 1,
 			"Time": null
 		},
-		"אלגברה ליניארית": {
+		"Linear Algebra": {
 			"Year": 1,
 			"Time": null
 		},
-		"מבוא להסתברות וסטטיסטיקה": {
+		"Introduction to statistics and probablilty": {
 			"Year": 2,
 			"Time": null
 		},
-		"תכנות מונחה עצמים מתקדם": {
+		"Advanced Object Oriented Programming": {
 			"Year": 2,
 			"Time": null
 		},
-		"אוטומטים ושפות פורמאליות": {
+		"Automates and formal languages": {
 			"Year": 2,
 			"Time": null
 		},
-		"אלגוריתמים I": {
+		"Algorithms pt.1": {
 			"Year": 2,
 			"Time": null
 		},
-		"מבני נתונים": {
+		"Data structures": {
 			"Year": 2,
 			"Time": null
 		},
-		"עקרונות שפות תוכנה": {
+		"Software language principals": {
 			"Year": 2,
 			"Time": null
 		},
-		"יסודות הנדסת תוכנה": {
+		"Software engenering principals": {
 			"Year": 2,
 			"Time": null
 		},
-		"ניתוח ועיצוב בהנדסת תוכנה": {
+		"Design and analysis in software engenering": {
 			"Year": 2,
 			"Time": null
 		},
-		"לוגיקה ונושאים דיסקרטיים II": {
+		"Logic and discrete topics pt.1I": {
 			"Year": 2,
 			"Time": null
 		},
-		"ניהול פרויקט תוכנה": {
+		"Software project management": {
 			"Year": 2,
 			"Time": null
 		},
-		"תכנות מונחה עצמים מתקדם": {
+		"Advanced Object Oriented Programming": {
 			"Year": 2,
 			"Time": null
 		},
-		"מערכות הפעלה": {
+		"Operating Systems": {
 			"Year": 3,
 			"Time": null
 		},
-		"מבוא לתקשורת מחשבים": {
+		"Introduction to Computer Networking": {
 			"Year": 3,
 			"Time": null
 		},
-		"קומפילציה": {
+		"Compilation": {
 			"Year": 3,
 			"Time": null
 		},
-		"אנליזה נומרית": {
+		"Numerical Analysis": {
 			"Year": 3,
 			"Time": null
 		},
-		"חישוביות וסיבוכיות": {
+		"Computability and complexity": {
 			"Year": 3,
 			"Time": null
 		},
-		"בסיסי נתונים": {
+		"Databases": {
 			"Year": 3,
 			"Time": null
 		},
-		"בדיקות ואיכות בהנדסת תוכנה": {
+		"Testing and quality in software engenering": {
 			"Year": 3,
 			"Time": null
 		},
-		"רשתות תקשורת מחשבים": {
+		"Computer commuincation networks": {
 			"Year": 3,
 			"Time": null
 		},
-		"מבוא לקומפילציה": {
+		"Introduction to compilation": {
 			"Year": 3,
 			"Time": null
 		},
-		"אלגוריתמים II": {
+		"Algorithms pt.2": {
 			"Year": 4,
 			"Time": null
 		},
-		"אמינות": {
+		"Reliability": {
 			"Year": 4,
 			"Time": null
 		},
-		"בטיחות תוכנה": {
+		"Software Security": {
 			"Year": 4,
 			"Time": null
 		}
 	},
 	"Domains": {
-		"ארכיטקטורת מחשבים II": {
+		"Computer Architecture pt.2": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"ארכיטקטורת מחשבים I": {
+		"Computer Architecture pt.1": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"פיזיקה להנדסת תוכנה": {
+		"Physics for software engeneres": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"חדו\"א מ 1": {
+		"Calculus 1": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"חדו\"א מ 2": {
+		"Calculus 2": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מבוא למדעי המחשב": {
+		"Introduction to computer science": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"תכנות מונחה עצמים": {
+		"Object oriented programming": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"לוגיקה ונושאים דיסקרטיים I": {
+		"Logic and discrete topics pt.1": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אלגברה ליניארית": {
+		"Linear Algebra": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מבוא להסתברות וסטטיסטיקה": {
+		"Introduction to statistics and probablilty": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"תכנות מונחה עצמים מתקדם": {
+		"Advanced Object Oriented Programming": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אוטומטים ושפות פורמאליות": {
+		"Automates and formal languages": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אלגוריתמים I": {
+		"Algorithms pt.1": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מבני נתונים": {
+		"Data structures": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"עקרונות שפות תוכנה": {
+		"Software language principals": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"יסודות הנדסת תוכנה": {
+		"Software engenering principals": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"ניתוח ועיצוב בהנדסת תוכנה": {
+		"Design and analysis in software engenering": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"לוגיקה ונושאים דיסקרטיים II": {
+		"Logic and discrete topics pt.1I": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"ניהול פרויקט תוכנה": {
+		"Software project management": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"תכנות מונחה עצמים מתקדם": {
+		"Advanced Object Oriented Programming": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מערכות הפעלה": {
+		"Operating Systems": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מבוא לתקשורת מחשבים": {
+		"Introduction to Computer Networking": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"קומפילציה": {
+		"Compilation": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אנליזה נומרית": {
+		"Numerical Analysis": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"חישוביות וסיבוכיות": {
+		"Computability and complexity": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"בסיסי נתונים": {
+		"Databases": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"בדיקות ואיכות בהנדסת תוכנה": {
+		"Testing and quality in software engenering": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"רשתות תקשורת מחשבים": {
+		"Computer commuincation networks": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מבוא לקומפילציה": {
+		"Introduction to compilation": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אלגוריתמים II": {
+		"Algorithms pt.2": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אמינות": {
+		"Reliability": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"בטיחות תוכנה": {
+		"Software Security": {
 			"Time": {
-				"Ranges": [["Jun 7 2016  9:00", "Jul 15 2016  18:00", 60, "SA", "9-18", "0-60"]],
+				"Ranges": [["Jun 7 2016  9:00", "Jul 6 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		}
 	},
 	"Constraints" : {
-	"ארכיטקטורת מחשבים II" : {
+	"Computer Architecture pt.2" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -342,10 +342,10 @@
 			}
 		]
 	},
-	"ארכיטקטורת מחשבים I" : {
+	"Computer Architecture pt.1" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -360,10 +360,10 @@
 			}
 		]
 	},
-	"פיזיקה להנדסת תוכנה" : {
+	"Physics for software engeneres" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -378,10 +378,10 @@
 			}
 		]
 	},
-	"חדו\"א מ 1" : {
+	"Calculus 1" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -396,10 +396,10 @@
 			}
 		]
 	},
-	"חדו\"א מ 2" : {
+	"Calculus 2" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -414,10 +414,10 @@
 			}
 		]
 	},
-	"מבוא למדעי המחשב" : {
+	"Introduction to computer science" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -432,10 +432,10 @@
 			}
 		]
 	},
-	"תכנות מונחה עצמים" : {
+	"Object oriented programming" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -450,10 +450,10 @@
 			}
 		]
 	},
-	"לוגיקה ונושאים דיסקרטיים I" : {
+	"Logic and discrete topics pt.1" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -468,10 +468,10 @@
 			}
 		]
 	},
-	"אלגברה ליניארית" : {
+	"Linear Algebra" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -486,10 +486,10 @@
 			}
 		]
 	},
-	"מבוא להסתברות וסטטיסטיקה" : {
+	"Introduction to statistics and probablilty" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -504,10 +504,10 @@
 			}
 		]
 	},
-	"תכנות מונחה עצמים מתקדם" : {
+	"Advanced Object Oriented Programming" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -522,10 +522,10 @@
 			}
 		]
 	},
-	"אוטומטים ושפות פורמאליות" : {
+	"Automates and formal languages" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -540,10 +540,10 @@
 			}
 		]
 	},
-	"אלגוריתמים I" : {
+	"Algorithms pt.1" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -558,10 +558,10 @@
 			}
 		]
 	},
-	"מבני נתונים" : {
+	"Data structures" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -576,10 +576,10 @@
 			}
 		]
 	},
-	"עקרונות שפות תוכנה" : {
+	"Software language principals" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -594,10 +594,10 @@
 			}
 		]
 	},
-	"יסודות הנדסת תוכנה" : {
+	"Software engenering principals" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -612,10 +612,10 @@
 			}
 		]
 	},
-	"ניתוח ועיצוב בהנדסת תוכנה" : {
+	"Design and analysis in software engenering" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -630,10 +630,10 @@
 			}
 		]
 	},
-	"לוגיקה ונושאים דיסקרטיים II" : {
+	"Logic and discrete topics pt.1I" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -648,10 +648,10 @@
 			}
 		]
 	},
-	"ניהול פרויקט תוכנה" : {
+	"Software project management" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -666,10 +666,10 @@
 			}
 		]
 	},
-	"תכנות מונחה עצמים מתקדם" : {
+	"Advanced Object Oriented Programming" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -684,10 +684,10 @@
 			}
 		]
 	},
-	"מערכות הפעלה" : {
+	"Operating Systems" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -702,10 +702,10 @@
 			}
 		]
 	},
-	"מבוא לתקשורת מחשבים" : {
+	"Introduction to Computer Networking" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -720,10 +720,10 @@
 			}
 		]
 	},
-	"קומפילציה" : {
+	"Compilation" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -738,10 +738,10 @@
 			}
 		]
 	},
-	"אנליזה נומרית" : {
+	"Numerical Analysis" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -756,10 +756,10 @@
 			}
 		]
 	},
-	"חישוביות וסיבוכיות" : {
+	"Computability and complexity" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -774,10 +774,10 @@
 			}
 		]
 	},
-	"בסיסי נתונים" : {
+	"Databases" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -792,10 +792,10 @@
 			}
 		]
 	},
-	"בדיקות ואיכות בהנדסת תוכנה" : {
+	"Testing and quality in software engenering" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -810,10 +810,10 @@
 			}
 		]
 	},
-	"רשתות תקשורת מחשבים" : {
+	"Computer commuincation networks" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -828,10 +828,10 @@
 			}
 		]
 	},
-	"מבוא לקומפילציה" : {
+	"Introduction to compilation" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -846,10 +846,10 @@
 			}
 		]
 	},
-	"אלגוריתמים II" : {
+	"Algorithms pt.2" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -864,10 +864,10 @@
 			}
 		]
 	},
-	"אמינות" : {
+	"Reliability" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
@@ -882,10 +882,10 @@
 			}
 		]
 	},
-	"בטיחות תוכנה" : {
+	"Software Security" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 4])"
+				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 3])"
 			}, {
 				"Name" : "TotalConCurrent",
 				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"

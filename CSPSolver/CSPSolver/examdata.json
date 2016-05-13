@@ -1,162 +1,162 @@
 {
 	"Vars": {
-		"ארכיטקטורת מחשבים II": {
+		"Computer Architecture pt.2": {
 			"Year": 1,
 			"Time": null
 		},
-		"ארכיטקטורת מחשבים I": {
+		"Computer Architecture pt.1": {
 			"Year": 1,
 			"Time": null
 		},
-		"פיזיקה להנדסת תוכנה": {
+		"Physics for software engeneres": {
 			"Year": 1,
 			"Time": null
 		},
-		"חדו\"א מ 1": {
+		"Calculus 1": {
 			"Year": 1,
 			"Time": null
 		},
-		"מבוא להסתברות וסטטיסטיקה": {
+		"Introduction to statistics and probablilty": {
 			"Year": 2,
 			"Time": null
 		},
-		"תכנות מונחה עצמים מתקדם": {
+		"Advanced object oriented programming": {
 			"Year": 2,
 			"Time": null
 		},
-		"אוטומטים ושפות פורמאליות": {
+		"Automates and formal languages": {
 			"Year": 2,
 			"Time": null
 		},
-		"אלגוריתמים I": {
+		"Algorithms pt.1": {
 			"Year": 2,
 			"Time": null
 		},
-		"מבני נתונים": {
+		"Data structures": {
 			"Year": 2,
 			"Time": null
 		},
-		"מערכות הפעלה": {
+		"Operating Systems": {
 			"Year": 3,
 			"Time": null
 		},
-		"מבוא לתקשורת מחשבים": {
+		"Introduction to computer networking": {
 			"Year": 3,
 			"Time": null
 		},
-		"קומפילציה": {
+		"Compilation": {
 			"Year": 3,
 			"Time": null
 		},
-		"אנליזה נומרית": {
+		"Numerical analysis": {
 			"Year": 3,
 			"Time": null
 		},
-		"אלגוריתמים II": {
+		"Algorithms pt.2": {
 			"Year": 4,
 			"Time": null
 		},
-		"אמינות": {
+		"Reliability": {
 			"Year": 4,
 			"Time": null
 		},
-		"בטיחות תוכנה": {
+		"Software Security": {
 			"Year": 4,
 			"Time": null
 		}
 	},
 	"Domains": {
-		"ארכיטקטורת מחשבים II": {
+		"Computer Architecture pt.2": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"ארכיטקטורת מחשבים I": {
+		"Computer Architecture pt.1": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"פיזיקה להנדסת תוכנה": {
+		"Physics for software engeneres": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"חדו\"א מ 1": {
+		"Calculus 1": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מבוא להסתברות וסטטיסטיקה": {
+		"Introduction to statistics and probablilty": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"תכנות מונחה עצמים מתקדם": {
+		"Advanced object oriented programming": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אוטומטים ושפות פורמאליות": {
+		"Automates and formal languages": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אלגוריתמים I": {
+		"Algorithms pt.1": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מבני נתונים": {
+		"Data structures": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מערכות הפעלה": {
+		"Operating Systems": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"מבוא לתקשורת מחשבים": {
+		"Introduction to computer networking": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"קומפילציה": {
+		"Compilation": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אנליזה נומרית": {
+		"Numerical analysis": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אלגוריתמים II": {
+		"Algorithms pt.2": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"אמינות": {
+		"Reliability": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
 			}
 		},
-		"בטיחות תוכנה": {
+		"Software Security": {
 			"Time": {
 				"Ranges": [["Jun 7 2016  9:00", "Jun 30 2016  18:00", 60, "SA", "9-18", "0-60"]],
 				"Values": null
@@ -164,7 +164,7 @@
 		}
 	},
 	"Constraints" : {
-	"ארכיטקטורת מחשבים II" : {
+	"Computer Architecture pt.2" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -182,7 +182,7 @@
 			}
 		]
 	},
-	"ארכיטקטורת מחשבים I" : {
+	"Computer Architecture pt.1" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -200,7 +200,7 @@
 			}
 		]
 	},
-	"פיזיקה להנדסת תוכנה" : {
+	"Physics for software engeneres" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -218,7 +218,7 @@
 			}
 		]
 	},
-	"חדו\"א מ 1" : {
+	"Calculus 1" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -236,7 +236,7 @@
 			}
 		]
 	},
-	"מבוא להסתברות וסטטיסטיקה" : {
+	"Introduction to statistics and probablilty" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -254,7 +254,7 @@
 			}
 		]
 	},
-	"תכנות מונחה עצמים מתקדם" : {
+	"Advanced object oriented programming" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -272,7 +272,7 @@
 			}
 		]
 	},
-	"אוטומטים ושפות פורמאליות" : {
+	"Automates and formal languages" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -290,7 +290,7 @@
 			}
 		]
 	},
-	"אלגוריתמים I" : {
+	"Algorithms pt.1" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -308,7 +308,7 @@
 			}
 		]
 	},
-	"מבני נתונים" : {
+	"Data structures" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -326,7 +326,7 @@
 			}
 		]
 	},
-	"מערכות הפעלה" : {
+	"Operating Systems" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -344,7 +344,7 @@
 			}
 		]
 	},
-	"מבוא לתקשורת מחשבים" : {
+	"Introduction to computer networking" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -362,7 +362,7 @@
 			}
 		]
 	},
-	"קומפילציה" : {
+	"Compilation" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -380,7 +380,7 @@
 			}
 		]
 	},
-	"אנליזה נומרית" : {
+	"Numerical analysis" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -398,7 +398,7 @@
 			}
 		]
 	},
-	"אלגוריתמים II" : {
+	"Algorithms pt.2" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -416,7 +416,7 @@
 			}
 		]
 	},
-	"אמינות" : {
+	"Reliability" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
@@ -434,7 +434,7 @@
 			}
 		]
 	},
-	"בטיחות תוכנה" : {
+	"Software Security" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"

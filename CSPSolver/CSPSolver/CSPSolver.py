@@ -114,11 +114,12 @@ class CSP(object):
         return self.BackTrack([], copy.deepcopy(self.varDict),copy.deepcopy(self.domDict), forward_checking, single)
 
     #region bactrack
-    def BackTrack(self,Solutions, assignment, domains, forward_checking, single):
+    def BackTrack(self,Solutions, assignment, domains, forward_checking, single, max_solutions = 100):
 
         # Check if solution found
         if all([all(i.values()) for i in assignment.values()]):
             Solutions.append(copy.deepcopy(assignment))
+            print "solution {0} found!".format(len(Solutions))
             return Solutions
 
         # Calculate the total number of possible values from all of the domains for each variable
@@ -216,7 +217,7 @@ class CSP(object):
                                     
                                 
                     result = self.BackTrack(Solutions,assignment,domains_new,forward_checking,single)
-                    if Solutions and single:
+                    if Solutions and (single or len(Solutions) == max_solutions):
                         return Solutions
                     else:
                         assignment[u_var][k] = None
@@ -298,7 +299,7 @@ class CSP(object):
         if isSolved:
             Solution = pop[0]
             for k, v in Solution.iteritems():
-                print "{0}:{1}".format(k,v['Color'])
+                print "{0}:{1}".format(k,v.values())
 
             return Solution
         else:
@@ -328,7 +329,7 @@ class CSP(object):
 
 
         # randomly add other individuals to promote genetic diversity
-        for X in graded[retain_length:]:
+        for X in graded[retain_length:2*retain_length]:
             if random_select > random(): #random_select-0.01:
                 parents.append(X)
 
@@ -433,7 +434,7 @@ class CSP(object):
                 clist.append(k)
         if getConflictedList:
             return clist
-        print sum
+        print "Individual violation Count {0}".format(sum)
         return sum
 
 #endregion
@@ -455,8 +456,9 @@ class Constraint(object):
         if (individual == None):
             individual = self.varDict
 
+
         #Run all requriered checks (check functions)
-        for k,values in self.checklist.iteritems():
+        for k, values in self.checklist.iteritems():
             code = "code=" + self.funcList[k]
             exec code
             #if checks are in raletion to other variables
@@ -482,18 +484,18 @@ class Domain(object):
         self.AttributeInVar =AttributeInVar
 
 
-# Create and init the Australian Map CSP
 global a
-a = CSP("examdata2.json")
+#"examdata2.json"
+a = CSP("examdata.json")
 
 alg = "BackTrack"
 #alg = "Genetic"
 #alg = "MinConflicts"
-result = a.solve(alg, True)
-JsonLoader.SaveOutputData(result)
+result = a.solve("MinConflicts")
 
-for k,v in result.iteritems():
-    print k,v.values()
+JsonLoader.SaveOutputData(result)
+print result
+
 
 
 
