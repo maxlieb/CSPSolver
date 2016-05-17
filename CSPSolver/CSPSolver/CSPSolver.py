@@ -471,11 +471,8 @@ class Constraint(object):
             if values and values[0] != "*":
                 #check for each variable related
                 for currVal in values:
-                    try:
-                        if(code(varValue, individual[currVal]) == False):
-                            counter += 1
-                    except Exception:
-                        print "Delete me I'm a debug line!"
+                    if(code(varValue, individual[currVal]) == False):
+                        counter += 1
             # if in relation to all others
             elif values and values[0] == "*":
                 counter += code(varValue, allOthers.values())

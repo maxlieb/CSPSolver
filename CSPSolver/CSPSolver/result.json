@@ -6,148 +6,148 @@
         "Color": "Blue"
     }, 
     "AR": {
-        "Color": "Blue"
+        "Color": "Red"
     }, 
     "AZ": {
-        "Color": "Yellow"
+        "Color": "Green"
     }, 
     "CA": {
-        "Color": "Green"
+        "Color": "Red"
     }, 
     "CO": {
-        "Color": "Red"
+        "Color": "Blue"
     }, 
     "CT": {
-        "Color": "Blue"
+        "Color": "Green"
     }, 
     "DC": {
-        "Color": "Red"
+        "Color": "Green"
     }, 
     "DE": {
-        "Color": "Red"
+        "Color": "Blue"
     }, 
     "FL": {
-        "Color": "Green"
+        "Color": "Red"
     }, 
     "GA": {
-        "Color": "Red"
+        "Color": "Green"
     }, 
     "HI": {
-        "Color": "Yellow"
+        "Color": "Green"
     }, 
     "IA": {
-        "Color": "Green"
+        "Color": "Red"
     }, 
     "ID": {
-        "Color": "Yellow"
+        "Color": "Red"
     }, 
     "IL": {
-        "Color": "Yellow"
+        "Color": "Green"
     }, 
     "IN": {
-        "Color": "Red"
+        "Color": "Yellow"
     }, 
     "KS": {
-        "Color": "Green"
+        "Color": "Red"
     }, 
     "KY": {
-        "Color": "Blue"
+        "Color": "Red"
     }, 
     "LA": {
-        "Color": "Yellow"
+        "Color": "Blue"
     }, 
     "MA": {
-        "Color": "Red"
+        "Color": "Blue"
     }, 
     "MD": {
-        "Color": "Green"
+        "Color": "Red"
     }, 
     "ME": {
-        "Color": "Yellow"
+        "Color": "Red"
     }, 
     "MI": {
-        "Color": "Yellow"
+        "Color": "Green"
     }, 
     "MN": {
-        "Color": "Blue"
+        "Color": "Green"
     }, 
     "MO": {
-        "Color": "Red"
+        "Color": "Blue"
     }, 
     "MS": {
-        "Color": "Red"
+        "Color": "Green"
     }, 
     "MT": {
-        "Color": "Red"
+        "Color": "Yellow"
     }, 
     "NC": {
-        "Color": "Blue"
+        "Color": "Red"
     }, 
     "ND": {
-        "Color": "Green"
+        "Color": "Red"
     }, 
     "NE": {
-        "Color": "Blue"
+        "Color": "Yellow"
     }, 
     "NH": {
-        "Color": "Blue"
+        "Color": "Yellow"
     }, 
     "NJ": {
-        "Color": "Yellow"
+        "Color": "Green"
     }, 
     "NM": {
-        "Color": "Green"
+        "Color": "Red"
     }, 
     "NV": {
-        "Color": "Red"
+        "Color": "Blue"
     }, 
     "NY": {
-        "Color": "Green"
+        "Color": "Red"
     }, 
     "OH": {
-        "Color": "Green"
+        "Color": "Blue"
     }, 
     "OK": {
-        "Color": "Yellow"
+        "Color": "Green"
     }, 
     "OR": {
-        "Color": "Blue"
+        "Color": "Green"
     }, 
     "PA": {
-        "Color": "Blue"
+        "Color": "Yellow"
     }, 
     "RI": {
-        "Color": "Green"
+        "Color": "Yellow"
     }, 
     "SC": {
-        "Color": "Green"
+        "Color": "Yellow"
     }, 
     "SD": {
-        "Color": "Yellow"
-    }, 
-    "TN": {
-        "Color": "Green"
-    }, 
-    "TX": {
-        "Color": "Red"
-    }, 
-    "UT": {
         "Color": "Blue"
     }, 
-    "VA": {
+    "TN": {
         "Color": "Yellow"
+    }, 
+    "TX": {
+        "Color": "Yellow"
+    }, 
+    "UT": {
+        "Color": "Yellow"
+    }, 
+    "VA": {
+        "Color": "Blue"
     }, 
     "VT": {
-        "Color": "Yellow"
+        "Color": "Green"
     }, 
     "WA": {
-        "Color": "Red"
+        "Color": "Yellow"
     }, 
     "WI": {
-        "Color": "Red"
+        "Color": "Yellow"
     }, 
     "WV": {
-        "Color": "Red"
+        "Color": "Green"
     }, 
     "WY": {
         "Color": "Green"
