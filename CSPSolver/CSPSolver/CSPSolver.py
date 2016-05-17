@@ -1,4 +1,4 @@
-from random import randint, random, choice
+from random import randint, random, choice, sample
 from operator import add
 import copy
 from JsonLoader import JsonLoader
@@ -288,7 +288,7 @@ class CSP(object):
     def SolveGenetic(self, popSize=100):
         pop = self.population(popSize)
         isSolved = False
-        for _ in xrange(100):
+        for _ in xrange(1000):
             pop = self.evolve(pop)
             for p in pop:
                 self.fitness_history.append(self.GlobalValidate(p))
@@ -311,7 +311,7 @@ class CSP(object):
         summed = reduce(add, (self.GlobalValidate(x) for x in pop), 0)
         return summed / (len(pop) * 1.0)
 
-    def evolve(self, pop, retain=0.2, random_select=0.5, mutate=0.2):
+    def evolve(self, pop, retain=0.2, random_select=0.5, mutate=0.5):
         graded = []
         for x in pop:
             graded.append((self.GlobalValidate(x), x))
@@ -354,11 +354,17 @@ class CSP(object):
             if male != female:
                 male = parents[male]
                 female = parents[female]
-                # malehalf = dict(male.items()[len(male)/2:])
-                # femalehalf = dict(female.items()[:len(female)/2])
 
-                malehalf = copy.deepcopy(male.items()[len(male)/2:])
-                femalehalf = copy.deepcopy(female.items()[:len(female)/2])
+                malehalf = copy.deepcopy(sorted(male.items())[len(male)/2:])
+                femalehalf = copy.deepcopy(sorted(female.items())[:len(female)/2])
+                # malehalf = sample(copy.deepcopy(male.items()),len(male)/2)
+                # femaleCopy = copy.deepcopy(female.items())
+                # for x in femaleCopy:
+                #     if not malehalf.__contains__(x):
+                #         malehalf.append(x)
+
+
+
                 malehalf.extend(femalehalf)
                 child = dict(malehalf)
                 #
@@ -465,8 +471,11 @@ class Constraint(object):
             if values and values[0] != "*":
                 #check for each variable related
                 for currVal in values:
-                    if(code(varValue, individual[currVal]) == False):
-                        counter += 1
+                    try:
+                        if(code(varValue, individual[currVal]) == False):
+                            counter += 1
+                    except Exception:
+                        print "Delete me I'm a debug line!"
             # if in relation to all others
             elif values and values[0] == "*":
                 counter += code(varValue, allOthers.values())
@@ -486,9 +495,9 @@ class Domain(object):
 
 global a
 #"examdata2.json"
-a = CSP("examdata.json")
+a = CSP("USAdata.json")
 
-alg = "BackTrack"
+#alg = "BackTrack"
 #alg = "Genetic"
 #alg = "MinConflicts"
 result = a.solve("MinConflicts")

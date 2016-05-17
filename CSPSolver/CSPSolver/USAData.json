@@ -1,0 +1,1293 @@
+{
+	"Vars": {
+		"HI": {
+			"Color": null
+		},
+		"AK": {
+			"Color": null
+		},
+		"FL": {
+			"Color": null
+		},
+		"NH": {
+			"Color": null
+		},
+		"MI": {
+			"Color": null
+		},
+		"VT": {
+			"Color": null
+		},
+		"ME": {
+			"Color": null
+		},
+		"RI": {
+			"Color": null
+		},
+		"NY": {
+			"Color": null
+		},
+		"PA": {
+			"Color": null
+		},
+		"NJ": {
+			"Color": null
+		},
+		"DE": {
+			"Color": null
+		},
+		"MD": {
+			"Color": null
+		},
+		"VA": {
+			"Color": null
+		},
+		"WV": {
+			"Color": null
+		},
+		"OH": {
+			"Color": null
+		},
+		"IN": {
+			"Color": null
+		},
+		"IL": {
+			"Color": null
+		},
+		"CT": {
+			"Color": null
+		},
+		"WI": {
+			"Color": null
+		},
+		"NC": {
+			"Color": null
+		},
+		"DC": {
+			"Color": null
+		},
+		"MA": {
+			"Color": null
+		},
+		"TN": {
+			"Color": null
+		},
+		"AR": {
+			"Color": null
+		},
+		"MO": {
+			"Color": null
+		},
+		"GA": {
+			"Color": null
+		},
+		"SC": {
+			"Color": null
+		},
+		"KY": {
+			"Color": null
+		},
+		"AL": {
+			"Color": null
+		},
+		"LA": {
+			"Color": null
+		},
+		"MS": {
+			"Color": null
+		},
+		"IA": {
+			"Color": null
+		},
+		"MN": {
+			"Color": null
+		},
+		"OK": {
+			"Color": null
+		},
+		"TX": {
+			"Color": null
+		},
+		"NM": {
+			"Color": null
+		},
+		"KS": {
+			"Color": null
+		},
+		"NE": {
+			"Color": null
+		},
+		"SD": {
+			"Color": null
+		},
+		"ND": {
+			"Color": null
+		},
+		"WY": {
+			"Color": null
+		},
+		"MT": {
+			"Color": null
+		},
+		"CO": {
+			"Color": null
+		},
+		"ID": {
+			"Color": null
+		},
+		"UT": {
+			"Color": null
+		},
+		"AZ": {
+			"Color": null
+		},
+		"NV": {
+			"Color": null
+		},
+		"OR": {
+			"Color": null
+		},
+		"WA": {
+			"Color": null
+		},
+		"CA": {
+			"Color": null
+		}
+	},
+	"Domains": {
+		"HI": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"AK": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"FL": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"NH": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"MI": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"VT": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"ME": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"RI": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"NY": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"PA": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"NJ": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"DE": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"MD": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"VA": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"WV": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"OH": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"IN": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"IL": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"CT": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"WI": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"NC": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"DC": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"MA": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"TN": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"AR": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"MO": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"GA": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"SC": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"KY": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"AL": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"LA": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"MS": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"IA": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"MN": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"OK": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"TX": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"NM": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"KS": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"NE": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"SD": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"ND": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"WY": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"MT": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"CO": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"ID": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"UT": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"AZ": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"NV": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"OR": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"WA": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		},
+		"CA": {
+			"Color": {
+				"Ranges": null,
+				"Values": ["Red",
+				"Green",
+				"Blue",
+				"Yellow"]
+			}
+		}
+	},
+	"Constraints": {
+		"WA": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["ID",
+				"OR"]
+			}]
+		},
+		"DE": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["MD",
+				"NJ",
+				"PA"]
+			}]
+		},
+		"DC": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["MD",
+				"VA"]
+			}]
+		},
+		"WI": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["IA",
+				"IL",
+				"MI",
+				"MN"]
+			}]
+		},
+		"WV": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["KY",
+				"MD",
+				"OH",
+				"PA",
+				"VA"]
+			}]
+		},
+		"FL": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AL",
+				"GA"]
+			}]
+		},
+		"WY": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["CO",
+				"ID",
+				"MT",
+				"NE",
+				"SD",
+				"UT"]
+			}]
+		},
+		"NH": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["MA",
+				"ME",
+				"VT"]
+			}]
+		},
+		"NJ": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["DE",
+				"NY",
+				"PA"]
+			}]
+		},
+		"NM": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AZ",
+				"CO",
+				"OK",
+				"TX",
+				"UT"]
+			}]
+		},
+		"TX": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AR",
+				"LA",
+				"NM",
+				"OK"]
+			}]
+		},
+		"LA": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AR",
+				"MS",
+				"TX"]
+			}]
+		},
+		"NC": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["GA",
+				"SC",
+				"TN",
+				"VA"]
+			}]
+		},
+		"ND": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["MN",
+				"MT",
+				"SD"]
+			}]
+		},
+		"NE": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["CO",
+				"IA",
+				"KS",
+				"MO",
+				"SD",
+				"WY"]
+			}]
+		},
+		"TN": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AL",
+				"AR",
+				"GA",
+				"KY",
+				"MO",
+				"MS",
+				"NC",
+				"VA"]
+			}]
+		},
+		"NY": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["CT",
+				"MA",
+				"NJ",
+				"PA",
+				"VT"]
+			}]
+		},
+		"PA": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["DE",
+				"MD",
+				"NJ",
+				"NY",
+				"OH",
+				"WV"]
+			}]
+		},
+		"RI": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["CT",
+				"MA"]
+			}]
+		},
+		"NV": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AZ",
+				"CA",
+				"ID",
+				"OR",
+				"UT"]
+			}]
+		},
+		"VA": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["DC",
+				"KY",
+				"MD",
+				"NC",
+				"TN",
+				"WV"]
+			}]
+		},
+		"CO": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AZ",
+				"KS",
+				"NE",
+				"NM",
+				"OK",
+				"UT",
+				"WY"]
+			}]
+		},
+		"CA": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AZ",
+				"NV",
+				"OR"]
+			}]
+		},
+		"AL": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["FL",
+				"GA",
+				"MS",
+				"TN"]
+			}]
+		},
+		"AR": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["LA",
+				"MO",
+				"MS",
+				"OK",
+				"TN",
+				"TX"]
+			}]
+		},
+		"VT": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["MA",
+				"NH",
+				"NY"]
+			}]
+		},
+		"IL": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["IA",
+				"IN",
+				"KY",
+				"MO",
+				"WI"]
+			}]
+		},
+		"GA": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AL",
+				"FL",
+				"NC",
+				"SC",
+				"TN"]
+			}]
+		},
+		"IN": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["IL",
+				"KY",
+				"MI",
+				"OH"]
+			}]
+		},
+		"IA": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["MN",
+				"MO",
+				"NE",
+				"SD",
+				"WI",
+				"IL"]
+			}]
+		},
+		"MA": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["CT",
+				"NH",
+				"NY",
+				"RI",
+				"VT"]
+			}]
+		},
+		"AZ": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["CA",
+				"CO",
+				"NM",
+				"NV",
+				"UT"]
+			}]
+		},
+		"ID": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["MT",
+				"NV",
+				"OR",
+				"UT",
+				"WA",
+				"WY"]
+			}]
+		},
+		"CT": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["MA",
+				"NY",
+				"RI"]
+			}]
+		},
+		"ME": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["NH"]
+			}]
+		},
+		"MD": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["DC",
+				"DE",
+				"PA",
+				"VA",
+				"WV"]
+			}]
+		},
+		"OK": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AR",
+				"CO",
+				"KS",
+				"MO",
+				"NM",
+				"TX"]
+			}]
+		},
+		"OH": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["IN",
+				"KY",
+				"MI",
+				"PA",
+				"WV"]
+			}]
+		},
+		"UT": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AZ",
+				"CO",
+				"ID",
+				"NM",
+				"NV",
+				"WY"]
+			}]
+		},
+		"MO": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AR",
+				"IA",
+				"IL",
+				"KS",
+				"KY",
+				"NE",
+				"OK",
+				"TN"]
+			}]
+		},
+		"MN": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["IA",
+				"ND",
+				"SD",
+				"WI"]
+			}]
+		},
+		"MI": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["IN",
+				"OH",
+				"WI"]
+			}]
+		},
+		"KS": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["CO",
+				"MO",
+				"NE",
+				"OK"]
+			}]
+		},
+		"MT": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["ID",
+				"ND",
+				"SD",
+				"WY"]
+			}]
+		},
+		"MS": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["AL",
+				"AR",
+				"LA",
+				"TN"]
+			}]
+		},
+		"SC": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["GA",
+				"NC"]
+			}]
+		},
+		"KY": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["IL",
+				"IN",
+				"MO",
+				"OH",
+				"TN",
+				"VA",
+				"WV"]
+			}]
+		},
+		"OR": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["CA",
+				"ID",
+				"NV",
+				"WA"]
+			}]
+		},
+		"SD": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": [{
+				"Name": "Different",
+				"ArgList": ["IA",
+				"MN",
+				"MT",
+				"ND",
+				"NE",
+				"WY"]
+			}]
+		},
+		"HI": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": []
+		},
+		"AK": {
+			"FuncList": [{
+				"Name": "Different",
+				"Function": "lambda x,y:x['Color']!=y['Color']"
+			}],
+			"CheckList": []
+		}
+	}
+}
