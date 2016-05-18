@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link rel='stylesheet' href='../lib/cupertino/jquery-ui.min.css' />
+<link href='../fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../fullcalendar.min.js'></script>
+<script src='../lang-all.js'></script>
+<script>
+
+	$(document).ready(function() {
+		var currentLangCode = 'he';
+
+		// build the language selector's options
+		$.each($.fullCalendar.langs, function(langCode) {
+			$('#lang-selector').append(
+				$('<option/>')
+					.attr('value', langCode)
+					.prop('selected', langCode == currentLangCode)
+					.text(langCode)
+			);
+		});
+
+		// rerender the calendar when the selected option changes
+		$('#lang-selector').on('change', function() {
+			if (this.value) {
+				currentLangCode = this.value;
+				$('#calendar').fullCalendar('destroy');
+				renderCalendar();
+			}
+		});
+
+		function renderCalendar() {
+			$('#calendar').fullCalendar({
+				header: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'month,agendaWeek,agendaDay'
+				},
+				defaultDate: '2016-06-07',
+				lang: currentLangCode,
+				buttonIcons: false, // show the prev/next text
+				weekNumbers: true,
+				editable: true,
+				eventLimit: true, // allow "more" link when too many events
+				events: [
+	{
+		title: 'Numerical analysis',
+		start: '2016-06-22T10:00:00',
+		end: '2016-06-22T13:00:00'
+	},
+	{
+		title: 'Introduction to computer networking',
+		start: '2016-06-14T13:00:00',
+		end: '2016-06-14T16:00:00'
+	},
+	{
+		title: 'Calculus 1',
+		start: '2016-06-30T14:00:00',
+		end: '2016-06-30T17:00:00'
+	},
+	{
+		title: 'Algorithms pt.2',
+		start: '2016-06-26T11:00:00',
+		end: '2016-06-26T14:00:00'
+	},
+	{
+		title: 'Compilation',
+		start: '2016-06-08T17:00:00',
+		end: '2016-06-08T20:00:00'
+	},
+	{
+		title: 'Introduction to statistics and probablilty',
+		start: '2016-06-16T15:00:00',
+		end: '2016-06-16T18:00:00'
+	},
+	{
+		title: 'Automates and formal languages',
+		start: '2016-06-10T11:00:00',
+		end: '2016-06-10T14:00:00'
+	},
+	{
+		title: 'Software Security',
+		start: '2016-06-16T13:00:00',
+		end: '2016-06-16T16:00:00'
+	},
+	{
+		title: 'Data structures',
+		start: '2016-06-19T14:00:00',
+		end: '2016-06-19T17:00:00'
+	},
+	{
+		title: 'Algorithms pt.1',
+		start: '2016-06-14T09:00:00',
+		end: '2016-06-14T12:00:00'
+	},
+	{
+		title: 'Reliability',
+		start: '2016-06-10T09:00:00',
+		end: '2016-06-10T12:00:00'
+	},
+	{
+		title: 'Computer Architecture pt.2',
+		start: '2016-06-09T10:00:00',
+		end: '2016-06-09T13:00:00'
+	},
+	{
+		title: 'Advanced object oriented programming',
+		start: '2016-06-07T12:00:00',
+		end: '2016-06-07T15:00:00'
+	},
+	{
+		title: 'Computer Architecture pt.1',
+		start: '2016-06-07T12:00:00',
+		end: '2016-06-07T15:00:00'
+	},
+	{
+		title: 'Operating Systems',
+		start: '2016-06-27T17:00:00',
+		end: '2016-06-27T20:00:00'
+	},
+	{
+		title: 'Physics for software engeneres',
+		start: '2016-06-15T11:00:00',
+		end: '2016-06-15T14:00:00'
+	}
+]
+			});
+		}
+
+		renderCalendar();
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#top {
+		background: #eee;
+		border-bottom: 1px solid #ddd;
+		padding: 0 10px;
+		line-height: 40px;
+		font-size: 12px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 40px auto;
+		padding: 0 10px;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='top'>
+
+		Language:
+		<select id='lang-selector'></select>
+
+	</div>
+
+	<div id='calendar'></div>
+
+</body>
+</html>

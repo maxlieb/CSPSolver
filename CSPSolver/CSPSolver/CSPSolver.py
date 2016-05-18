@@ -4,6 +4,9 @@ import copy
 from JsonLoader import JsonLoader
 from dateutil.rrule import *
 from datetime import datetime, timedelta
+import calendar
+import xml.etree.ElementTree as etree
+import os
 
 def strToTime(str):
     return datetime.strptime(str, '%b %d %Y %H:%M')
@@ -492,13 +495,113 @@ class Domain(object):
 
 global a
 #"examdata2.json"
-a = CSP("USAdata.json")
+a = CSP("examdata.json")
 
 #alg = "BackTrack"
 #alg = "Genetic"
 #alg = "MinConflicts"
-result = a.solve("MinConflicts")
 
+result = a.solve("Genetic")
+
+
+def DispalyCalendar(result, csp):
+    if isinstance(result, list):
+        result = result[randint(0, len(result) - 1)]
+    start_date_str = csp.domDict.popitem()[1][0].Ranges[0][0]
+    end_date_str = csp.domDict.popitem()[1][0].Ranges[0][1]
+    start_date = strToTime(start_date_str)
+    end_date = strToTime(end_date_str)
+    months = [(x.year, x.month) for x in
+              rrule(MONTHLY, dtstart=start_date.replace(day=1), until=end_date.replace(day=1))]
+    allmonhtml = ""
+    for mon in months:
+        # Generate basic calendar html string
+        myCal = calendar.HTMLCalendar(calendar.SUNDAY)
+        htmlStr = myCal.formatmonth(mon[0], mon[1])
+        htmlStr = htmlStr.replace("&nbsp;", " ")
+
+        # Explore generated html elements
+        root = etree.fromstring(htmlStr)
+        # for each subject
+        for subject, assign in result.iteritems():
+            for attribute, value in assign.iteritems():
+                # get the assigned time
+                if attribute == "Time":
+                    currTime = strToTime(value)
+                    # loop through calendar cells
+                    for elem in root.findall("*//td"):
+                        # If Week day matches
+                        if elem.get("class") == currTime.strftime("%a").lower():
+                            # If month day matches and it's actually the same month (and not by chance)
+                            if int(elem.text) == currTime.day and currTime.month == mon[1]:
+                                br = etree.SubElement(elem, "br")
+                                br.tail = subject + "<br/>" + "(year " + str(
+                                    result[subject]["Year"]) + ")" + "<br/>" + currTime.strftime("%H:%M")
+
+        if allmonhtml != "":
+            allmonhtml += "<br/>"
+        allmonhtml += etree.tostring(root).replace("&lt;", "<").replace("&gt;", ">"). \
+            replace("border=\"0\" cellpadding=\"0\" cellspacing=\"0\"",
+                    "border=\"1\" cellpadding=\"1\" cellspacing=\"1\" "). \
+            replace("<td ", "<td height = \"100\" width = \"200\" valign=\"Top\"")
+    calfile = open("cal.html", "w")
+    calfile.write(allmonhtml)
+    calfile.close()
+    os.system("cal.html")
+
+def DispalyStyledCalendar(result,csp):
+    if isinstance(result, list):
+        result = result[randint(0, len(result) - 1)]
+    start_date_str = csp.domDict.popitem()[1][0].Ranges[0][0]
+    start_date = strToTime(start_date_str)
+    defaultDateString = "'"+start_date.strftime("%Y-%m-%d")+"'"
+    EventArray = "[\n"
+    for title in result:
+        stime = strToTime(result[title]["Time"]).strftime("%Y-%m-%dT%H:%M:%S")
+        etime = (strToTime(result[title]["Time"]) + timedelta(hours=3)).strftime("%Y-%m-%dT%H:%M:%S")
+        sItem = "\t{\n\t\ttitle: '" + title + "',\n\t\tstart: '" + stime + "',\n\t\tend: '" + etime + "'\n\t}"
+        EventArray+= sItem+",\n"
+    EventArray = EventArray[:-2] + "\n]"
+
+    template = open("fullcalendar\demos\CSPResultTemplate.html","r")
+    htmldata = template.read()
+    template.close()
+    htmldata = htmldata.replace("DEFAULTDATE",defaultDateString).replace("EVENTARRAY",EventArray)
+    out = open("fullcalendar\demos\ResultCal.html","w")
+    out.write(htmldata)
+    out.close()
+    os.system("fullcalendar\demos\ResultCal.html")
+
+
+
+def DisplayUSMap(result):
+    if isinstance(result, list):
+        result = result[randint(0, len(result) - 1)]
+    US_COUNTRIES = ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA", "ME", "NH", "VT", "NY", "NJ",
+                    "PA", "DE", "MD", "WV",
+                    "KY", "OH", "MI", "WY", "MT", "ID", "WA", "TX", "CA", "AZ", "NV", "UT", "CO", "NM", "OR", "ND",
+                    "SD", "NE", "IA", "MS",
+                    "IN", "IL", "MN", "WI", "MO", "AR", "OK", "KS", "LA", "VA"]
+
+    STATE_TO_COLOR = {}
+    for x in result:
+        STATE_TO_COLOR[x] = result[x]["Color"]
+    print STATE_TO_COLOR
+
+    new_style = 'font-size:12px;fill-rule:nonzero;stroke:#FFFFFF;stroke-opacity:1;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-linecap:butt;marker-start:none;stroke-linejoin:bevel;fill:'
+
+    tree = etree.parse('us-map.svg')
+    root = tree.getroot()
+    for child in root:
+        if 'id' in child.attrib and child.attrib['id'] in US_COUNTRIES:
+            child.attrib['style'] = new_style + STATE_TO_COLOR[child.attrib['id']]
+
+    tree.write('counties_new.svg')
+    os.system('results.html')
+
+#DisplayUSMap(result)
+DispalyStyledCalendar(result,a)
+#DispalyCalendar(result, a)
 JsonLoader.SaveOutputData(result)
 print result
 

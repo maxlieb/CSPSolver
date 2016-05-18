@@ -1,155 +1,66 @@
 {
-    "AK": {
-        "Color": "Blue"
+    "Advanced object oriented programming": {
+        "Time": "Jun 07 2016 12:00", 
+        "Year": 2
     }, 
-    "AL": {
-        "Color": "Blue"
+    "Algorithms pt.1": {
+        "Time": "Jun 14 2016 09:00", 
+        "Year": 2
     }, 
-    "AR": {
-        "Color": "Red"
+    "Algorithms pt.2": {
+        "Time": "Jun 26 2016 11:00", 
+        "Year": 4
     }, 
-    "AZ": {
-        "Color": "Green"
+    "Automates and formal languages": {
+        "Time": "Jun 10 2016 11:00", 
+        "Year": 2
     }, 
-    "CA": {
-        "Color": "Red"
+    "Calculus 1": {
+        "Time": "Jun 30 2016 14:00", 
+        "Year": 1
     }, 
-    "CO": {
-        "Color": "Blue"
+    "Compilation": {
+        "Time": "Jun 08 2016 17:00", 
+        "Year": 3
     }, 
-    "CT": {
-        "Color": "Green"
+    "Computer Architecture pt.1": {
+        "Time": "Jun 07 2016 12:00", 
+        "Year": 1
     }, 
-    "DC": {
-        "Color": "Green"
+    "Computer Architecture pt.2": {
+        "Time": "Jun 09 2016 10:00", 
+        "Year": 1
     }, 
-    "DE": {
-        "Color": "Blue"
+    "Data structures": {
+        "Time": "Jun 19 2016 14:00", 
+        "Year": 2
     }, 
-    "FL": {
-        "Color": "Red"
+    "Introduction to computer networking": {
+        "Time": "Jun 14 2016 13:00", 
+        "Year": 3
     }, 
-    "GA": {
-        "Color": "Green"
+    "Introduction to statistics and probablilty": {
+        "Time": "Jun 16 2016 15:00", 
+        "Year": 2
     }, 
-    "HI": {
-        "Color": "Green"
+    "Numerical analysis": {
+        "Time": "Jun 22 2016 10:00", 
+        "Year": 3
     }, 
-    "IA": {
-        "Color": "Red"
+    "Operating Systems": {
+        "Time": "Jun 27 2016 17:00", 
+        "Year": 3
     }, 
-    "ID": {
-        "Color": "Red"
+    "Physics for software engeneres": {
+        "Time": "Jun 15 2016 11:00", 
+        "Year": 1
     }, 
-    "IL": {
-        "Color": "Green"
+    "Reliability": {
+        "Time": "Jun 10 2016 09:00", 
+        "Year": 4
     }, 
-    "IN": {
-        "Color": "Yellow"
-    }, 
-    "KS": {
-        "Color": "Red"
-    }, 
-    "KY": {
-        "Color": "Red"
-    }, 
-    "LA": {
-        "Color": "Blue"
-    }, 
-    "MA": {
-        "Color": "Blue"
-    }, 
-    "MD": {
-        "Color": "Red"
-    }, 
-    "ME": {
-        "Color": "Red"
-    }, 
-    "MI": {
-        "Color": "Green"
-    }, 
-    "MN": {
-        "Color": "Green"
-    }, 
-    "MO": {
-        "Color": "Blue"
-    }, 
-    "MS": {
-        "Color": "Green"
-    }, 
-    "MT": {
-        "Color": "Yellow"
-    }, 
-    "NC": {
-        "Color": "Red"
-    }, 
-    "ND": {
-        "Color": "Red"
-    }, 
-    "NE": {
-        "Color": "Yellow"
-    }, 
-    "NH": {
-        "Color": "Yellow"
-    }, 
-    "NJ": {
-        "Color": "Green"
-    }, 
-    "NM": {
-        "Color": "Red"
-    }, 
-    "NV": {
-        "Color": "Blue"
-    }, 
-    "NY": {
-        "Color": "Red"
-    }, 
-    "OH": {
-        "Color": "Blue"
-    }, 
-    "OK": {
-        "Color": "Green"
-    }, 
-    "OR": {
-        "Color": "Green"
-    }, 
-    "PA": {
-        "Color": "Yellow"
-    }, 
-    "RI": {
-        "Color": "Yellow"
-    }, 
-    "SC": {
-        "Color": "Yellow"
-    }, 
-    "SD": {
-        "Color": "Blue"
-    }, 
-    "TN": {
-        "Color": "Yellow"
-    }, 
-    "TX": {
-        "Color": "Yellow"
-    }, 
-    "UT": {
-        "Color": "Yellow"
-    }, 
-    "VA": {
-        "Color": "Blue"
-    }, 
-    "VT": {
-        "Color": "Green"
-    }, 
-    "WA": {
-        "Color": "Yellow"
-    }, 
-    "WI": {
-        "Color": "Yellow"
-    }, 
-    "WV": {
-        "Color": "Green"
-    }, 
-    "WY": {
-        "Color": "Green"
+    "Software Security": {
+        "Time": "Jun 16 2016 13:00", 
+        "Year": 4
     }
 }
