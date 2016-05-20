@@ -8,6 +8,7 @@ import time
 import calendar
 import xml.etree.ElementTree as etree
 import os
+import sys, getopt
 
 global perfIterCount
 def strToTime(str):
@@ -70,6 +71,7 @@ def getdaterange(timerange, cache=None):
 
 class CSP(object):
     def __init__(self, path = None, varDict = None, domDict = None, constraintDict = None):
+        # type: (object, object, object, object) -> object
         if path == None:
             if varDict == None:
                 self.varDict = dict()
@@ -596,8 +598,11 @@ def DisplayUSMap(result):
 
 global perfIterCount
 perfIterCount = 0
-myCSP = CSP(path="DemoInputs\ExamsShort.json")
-DisplayStyledCalendar(myCSP.solve("BackTrack"),myCSP)
+
+
+
+# myCSP = CSP(path="DemoInputs\ExamsShort.json")
+# DisplayStyledCalendar(myCSP.solve("MinConflicts"),myCSP)
 
 # testOutput = ""
 # BackTrackSingle = False
@@ -650,3 +655,56 @@ DisplayStyledCalendar(myCSP.solve("BackTrack"),myCSP)
 #     testOutput += "=================================================================\n"
 #
 # print testOutput
+
+def main(argv):
+    inputfile = ''
+    outputfile = ''
+    graphicOut = ''
+    alg = ''
+    try:
+        opts, args = getopt.getopt(argv,"hi:o:g:a:",["ifile=","ofile=","gout=","alg="])
+    except getopt.GetoptError:
+        print 'CSPSolver.py -i <inputfile> -o <outputfile> -g <cal\usmap> -a <algorithm>'
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print 'CSPSolver.py -i <inputfile> -o <outputfile> -g <cal\usmap> -a <BackTarck\MinConflicts\Genetic>'
+            sys.exit()
+        elif opt in ("-i", "--ifile"):
+            inputfile = arg
+        elif opt in ("-o", "--ofile"):
+            outputfile = arg
+        elif opt in ("-g", "--gout"):
+            graphicOut = arg
+        elif opt in ("-a", "--alg"):
+            alg = arg
+
+    if alg in ["MinConflicts","BackTrack","Genetic"] and inputfile:
+          try:
+              myCSP = CSP(inputfile)
+              perfStartTime = time.time()
+              result = myCSP.solve(alg)
+              perfEndTime = time.time()
+              if result:
+                  print result
+                  print "Algorithm completed after {0} iterations, and took {1} seconds".format(perfIterCount,perfEndTime - perfStartTime)
+                  if outputfile:
+                      try:
+                        JsonLoader.SaveOutputData(result,outputfile)
+                      except Exception:
+                          print "Could not save result"
+                  if graphicOut:
+                      try:
+                          if graphicOut == 'cal':
+                              DisplayStyledCalendar(result, myCSP)
+                          if graphicOut == 'usmap':
+                              DisplayUSMap(result)
+                      except Exception:
+                          print "Could not graphically display"
+          except Exception:
+              print "Could not open or parse input file"
+
+
+
+if __name__ == "__main__":
+   main(sys.argv[1:])
