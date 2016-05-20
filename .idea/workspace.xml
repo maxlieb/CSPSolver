@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4f80e0d3-e101-46ea-a639-b0daf3abc911" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSPSolver.py" afterPath="$PROJECT_DIR$/CSPSolver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/counties_new.svg" afterPath="$PROJECT_DIR$/counties_new.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullcalendar/demos/ResultCal.html" afterPath="$PROJECT_DIR$/fullcalendar/demos/ResultCal.html" />
     </list>
     <ignored path="CSPSolver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -288,6 +285,14 @@
       <option name="presentableId" value="Default" />
       <updated>1463745903074</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Command Line Processing">
+      <created>1463752038565</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1463752038565</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -323,6 +328,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Command Line Processing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Command Line Processing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

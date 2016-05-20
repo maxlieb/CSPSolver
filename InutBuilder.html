@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="cspApp" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://code.angularjs.org/1.5.5/docs/components/jquery-2.1.1/jquery.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="libs/datetimepicker/css/datetimepicker.css" />
+
+    <style type="text/css">
+        body {
+            background: #f5f5f5;
+        }
+        div {
+            background: #f5f5f5;
+        }
+        /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    </style>
+
+    <script type="text/javascript" src="libs/moment.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="libs/datetimepicker/js/datetimepicker.js"></script>
+    <script type="text/javascript" src="libs/datetimepicker/js/datetimepicker.templates.js"></script>
+
+    <script src="indexController.js"></script>
+    <meta charset="utf-8" />
+    <title>CSP - Python</title>
+</head>
+<body ng-controller="indexController as ctrl">
+    <div class="panel panel-primary">
+        <div class="panel-heading">CSP</div>
+        <div class="panel-body">
+            <ul class="nav nav-tabs">
+                <li ng-repeat="tab in ctrl.tabs" ng-class="{'active' : ctrl.currentTab == tab}"><a href="" ng-click="ctrl.selectTab(tab)">{{tab}}</a></li>
+            </ul>
+
+            <!--Variables Tab-->
+            <div ng-show="ctrl.currentTab == ctrl.tabs[0]">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Variables structure:</div>
+                    <div class="panel-body">
+                        <button type="button" ng-click="ctrl.addStructure()" class="btn btn-default" aria-label="Left Align">Add Property</button>
+
+                        <div ng-repeat="propertyStructure in ctrl.varStructure">
+                            <button type="button" class="btn btn-default" ng-click="ctrl.removeStructure(propertyStructure)" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </button>
+
+                            <span>property name:</span>
+                            <input type="text" ng-model="propertyStructure.propertyName" />
+
+                            <span>property type:</span>
+                            <select class="btn btn-default dropdown-toggle" ng-model="propertyStructure.propertyType">
+                                <option ng-repeat="type in ctrl.propertyTypes" value="{{type}}">{{type}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Variables:</div>
+                    <div class="panel-body">
+                        <span>variable name:</span>
+                        <input type="text" ng-model="variableName" />
+                        <button type="button" ng-click="ctrl.addVariable(variableName); variableName = ''" class="btn btn-default" aria-label="Left Align">Add Variable</button>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>variable name</th>
+                                        <th ng-repeat="property in ctrl.varStructure">{{property.propertyName}} ({{property.propertyType}})</th>
+                                        <th>remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="(name, variable) in ctrl.variables track by $index">
+                                        <td>{{$index + 1}}</td>
+                                        <td>{{name}}</td>
+                                        <td ng-repeat="property in ctrl.varStructure">
+                                            <input type="{{property.propertyType == 'Number' ? 'number' : 'text'}}" ng-model="variable[property.propertyName]" />
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-default" ng-click="ctrl.removeVariable(name)" aria-label="Left Align">
+                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Domains Tab-->
+            <div ng-show="ctrl.currentTab == ctrl.tabs[1]">
+                <div class="panel panel-primary" style="width: 20%; display: inline-block; vertical-align: top; ">
+                    <div class="panel-heading">Domains structure</div>
+                    <div class="panel-body">
+                        <div ng-repeat="(variableName, variableProperties) in ctrl.domains track by $index">
+                            <span>{{variableName}}:</span>
+                            <div class="list-group" style="padding-left: 20px;">
+                                <a class="list-group-item" style="display:block;" href=""
+                                   ng-class="{'active' : ctrl.selectedDomain == propertyDomains}"
+                                   ng-click="ctrl.setCurrentVar(propertyName, propertyDomains);"
+                                   ng-repeat="(propertyName, propertyDomains) in variableProperties">{{propertyName}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div ng-show="ctrl.selectedDomain" class="panel panel-primary" style="width: 78%; display: inline-block; vertical-align: top; ">
+                    <div class="panel-heading">Domain values & ranges</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-tabs">
+                            <li ng-class="{'active' : !isRanges}"><a href="" ng-click="isRanges = !isRanges">Values</a></li>
+                            <li ng-class="{'active' : isRanges}"><a href="" ng-click="isRanges = !isRanges">Ranges</a></li>
+                        </ul>
+
+                        <!-- ranges -->
+                        <div ng-show="isRanges">
+                            <!--<p>Start Date: {{ ctrl.selectedDomain.Ranges.startDate | date:'MMM d yyyy   H:mm' }}</p>-->
+                            <p>Start Date: {{ ctrl.selectedDomain.Ranges.startDate | date:'dd/MM/yyyy HH:mm' }}</p>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">Set start date</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <datetimepicker data-ng-model="ctrl.selectedDomain.Ranges.startDate" data-datetimepicker-config="{ dropdownSelector: '#dropdown1' }" />
+                                </ul>
+                            </div>
+
+                            <p>End Date: {{ ctrl.selectedDomain.Ranges.endDate | date:'dd/MM/yyyy HH:mm' }}</p>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" id="dropdown1" role="button" data-toggle="dropdown" data-target="#" href="#">Set end date</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <datetimepicker data-ng-model="ctrl.selectedDomain.Ranges.endDate" data-datetimepicker-config="{ dropdownSelector: '#dropdown1' }" />
+                                </ul>
+                            </div>
+
+                            <p>Hours jump: {{ctrl.selectedDomain.Ranges.hoursJump}}</p>
+                            <input type="number" ng-model="ctrl.selectedDomain.Ranges.hoursJump" min="0" />
+
+                            <p>Skip days: {{ctrl.selectedDomain.Ranges.skipDays}}</p>
+                            <div class="checkbox">
+                                <label ng-repeat="day in ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA']" style="margin-right: 30px;">
+                                    <input type="checkbox" ng-click="ctrl.setDay(day)" ng-checked="ctrl.selectedDomain.Ranges.skipDays.indexOf(day) != -1"> {{day}}
+                                </label>
+                            </div>
+
+                            <p>Hours ranges: {{ctrl.selectedDomain.Ranges.hoursRangeStart}} - {{ctrl.selectedDomain.Ranges.hoursRangeEnd}}</p>
+                            <input type="number" ng-model="ctrl.selectedDomain.Ranges.hoursRangeStart" min="0" max="23" />
+                            -
+                            <input type="number" ng-model="ctrl.selectedDomain.Ranges.hoursRangeEnd" min="0" max="23" />
+
+                            <p>Minutes ranges: {{ctrl.selectedDomain.Ranges.minutesRangeStart}} - {{ctrl.selectedDomain.Ranges.minutesRangeEnd}}</p>
+                            <input type="number" ng-model="ctrl.selectedDomain.Ranges.minutesRangeStart" min="0" max="60" />
+                            -
+                            <input type="number" ng-model="ctrl.selectedDomain.Ranges.minutesRangeEnd" min="0" max="60" />
+
+                        </div>
+
+                        <!-- values -->
+                        <div ng-show="!isRanges">
+                            <div ng-if="ctrl.selectedDomainValueType == 'text'">
+                                <span>Value:</span>
+                                <input type="text" ng-model="domainValueToAdd" />
+                                <button type="button" ng-click="ctrl.addDomainValue(domainValueToAdd); domainValueToAdd=''" class="btn btn-default" aria-label="Left Align">Add Value</button>
+                            </div>
+
+                            <div ng-if="ctrl.selectedDomainValueType == 'number'">
+                                <span>Value:</span>
+                                <input type="number" ng-model="domainValueToAdd" />
+                                <button type="button" ng-click="ctrl.addDomainValue(domainValueToAdd); domainValueToAdd=''" class="btn btn-default" aria-label="Left Align">Add Value</button>
+                            </div>
+
+                            <div ng-repeat="domainValue in ctrl.selectedDomain.Values">
+                                <button type="button" class="btn btn-default" ng-click="ctrl.removeDomainValue(domainValue)" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                </button>
+
+                                <span>{{domainValue}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Constraints Tab-->
+            <div ng-show="ctrl.currentTab == ctrl.tabs[2]">
+
+                <!--Globals-->
+                <div class="panel panel-primary" >
+                    <div class="panel-heading">Global Constraint functions & checks</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-tabs">
+                            <li ng-class="{'active' : !isChecks}"><a href="" ng-click="isChecks = !isChecks">FuncList</a></li>
+                            <li ng-class="{'active' : isChecks}"><a href="" ng-click="isChecks = !isChecks">CheckList</a></li>
+                        </ul>
+
+                        <!-- checks -->
+                        <div ng-show="isChecks">
+                            <div class="panel-body" ng-model="globalConstraintCheckToAdd">
+                                <form class="form-horizontal" ng-model="globalConstraintCheckToAdd" ng-init="globalConstraintCheckToAdd = { Name: '', ArgList: [] }">
+                                    <div class="form-group">
+                                        <label for="inputCheckName" class="col-sm-2 control-label">Check Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="globalConstraintCheckToAdd.Name" class="form-control" id="inputCheckName" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputChecknBody" class="col-sm-2 control-label">Arguments</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="globalArgToAdd" class="form-control" placeholder="arg OR arg1,arg2,arg3,..." />
+                                            <button type="button" class="btn btn-default" aria-label="Left Align"
+                                                    ng-click="ctrl.addItemTo(globalArgToAdd, globalConstraintCheckToAdd.ArgList); globalArgToAdd=''"
+                                                    ng-disabled="!globalArgToAdd">
+                                                Add Arg
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <div ng-repeat="arg in globalConstraintCheckToAdd.ArgList">
+                                                <button type="button" class="btn btn-default" ng-click="ctrl.removeItemFrom(arg, globalConstraintCheckToAdd.ArgList)" aria-label="Left Align">
+                                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                                </button>
+
+                                                <span>{{arg}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" ng-disabled="!globalConstraintCheckToAdd.Name"
+                                                ng-click="ctrl.addGlobalConstraintCheck(globalConstraintCheckToAdd); globalConstraintCheckToAdd = { Name: '', ArgList: [] }"
+                                                class="col-sm-2 btn btn-default" aria-label="Left Align">
+                                            Add Check to All
+                                        </button>
+                                        <div class="col-sm-10">
+                                            <div ng-repeat="check in ctrl.globalChecks">
+                                                <button type="button" class="btn btn-default" ng-click="ctrl.removeGlobalConstraintCheck(check)" aria-label="Left Align">
+                                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                                </button>
+
+                                                <span><b>Name:</b> {{check.Name}}</span>
+                                                <span><b>Arguments:</b> {{check.ArgList}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- functions -->
+                        <div ng-show="!isChecks">
+                            <div class="panel-body">
+                                <form class="form-horizontal" ng-model="globalConstraintFuncToAdd" ng-init="globalConstraintFuncToAdd = { Name: '', Function: '' }">
+                                    <div class="form-group">
+                                        <label for="inputFunctionName" class="col-sm-2 control-label">Function Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="globalConstraintFuncToAdd.Name" class="form-control" id="inputFunctionName" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputFunctionBody" class="col-sm-2 control-label">Function</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" ng-model="globalConstraintFuncToAdd.Function" class="form-control" id="inputFunctionBody" placeholder="Function body">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="button" ng-disabled="!globalConstraintFuncToAdd.Name || !globalConstraintFuncToAdd.Function"
+                                                    ng-click="ctrl.addGlobalConstraintFunc(globalConstraintFuncToAdd); globalConstraintFuncToAdd = { Name: '', Function: '' }"
+                                                    class="btn btn-default" aria-label="Left Align">
+                                                Add Function to All
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div ng-repeat="func in ctrl.globalFuncs">
+                                    <button type="button" class="btn btn-default" ng-click="ctrl.removeGlobalConstraintFunc(func)" aria-label="Left Align">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </button>
+
+                                    <span><b>Name:</b> {{func.Name}}</span>
+                                    <span><b>Function:</b> {{func.Function}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-primary" style="width: 20%; display: inline-block; vertical-align: top; ">
+                    <div class="panel-heading">Constraints structure</div>
+                    <div class="panel-body">
+                        <div ng-repeat="(variableName, variableProperties) in ctrl.constraints track by $index">
+                            <span>{{variableName}}:</span>
+                            <div class="list-group" style="padding-left: 20px;">
+                                <a class="list-group-item" style="display:block;" href=""
+                                   ng-class="{'active' : ctrl.selectedConstraint == propertyConstraints}"
+                                   ng-click="ctrl.setCurrentConst(propertyName, propertyConstraints)"
+                                   ng-repeat="(propertyName, propertyConstraints) in variableProperties">{{propertyName}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- checks -->
+                <div ng-show="ctrl.selectedConstraintProperty == 'CheckList'" class="panel panel-primary" style="width: 78%; display: inline-block; vertical-align: top; ">
+                    <div class="panel-heading">Specific Constraint Checks</div>
+                    <div class="panel-body" ng-model="constraintCheckToAdd">
+
+                        <form class="form-horizontal" ng-model="constraintCheckToAdd" ng-init="constraintCheckToAdd = { Name: '', ArgList: [] }">
+                            <div class="form-group">
+                                <label for="inputCheckName" class="col-sm-2 control-label">Check Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="constraintCheckToAdd.Name" class="form-control" id="inputCheckName" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputChecknBody" class="col-sm-2 control-label">Arguments</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="argToAdd" class="form-control" placeholder="arg OR arg1,arg2,arg3,..." />
+                                    <button type="button" class="btn btn-default" aria-label="Left Align"
+                                            ng-click="ctrl.addItemTo(argToAdd, constraintCheckToAdd.ArgList); argToAdd=''"
+                                            ng-disabled="!argToAdd">
+                                        Add Arg
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div ng-repeat="arg in constraintCheckToAdd.ArgList">
+                                        <button type="button" class="btn btn-default" ng-click="ctrl.removeItemFrom(arg, constraintCheckToAdd.ArgList)" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </button>
+
+                                        <span>{{arg}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" ng-disabled="!constraintCheckToAdd.Name"
+                                        ng-click="ctrl.addItemTo(constraintCheckToAdd, ctrl.selectedConstraint); constraintCheckToAdd = { Name: '', ArgList: [] }"
+                                        class="col-sm-2 btn btn-default" aria-label="Left Align">
+                                    Add Check
+                                </button>
+                                <div class="col-sm-10">
+                                    <div ng-repeat="check in ctrl.selectedConstraint">
+                                        <button type="button" class="btn btn-default" ng-click="ctrl.removeItemFrom(ctrl.selectedConstraint, check)" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                        </button>
+
+                                        <span><b>Name:</b> {{check.Name}}</span>
+                                        <span><b>Arguments:</b> {{check.ArgList}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                        <!--<div ng-init="constraintCheckToAdd = { Name: '', ArgList: [] }">
+                            <span>Check Name:</span>
+                            <input type="text" ng-model="constraintCheckToAdd.Name" />
+
+                            <div>
+                                <span>Arguments:</span>
+                                <input type="text" ng-model="argToAdd" />
+                                <button type="button" class="btn btn-default" aria-label="Left Align"
+                                        ng-click="ctrl.addItemTo(argToAdd, constraintCheckToAdd.ArgList); argToAdd=''"
+                                        ng-disabled="!argToAdd">
+                                    Add Arg
+                                </button>
+
+                                <div ng-repeat="arg in constraintCheckToAdd.ArgList">
+                                    <button type="button" class="btn btn-default" ng-click="ctrl.removeItemFrom(arg, constraintCheckToAdd.ArgList)" aria-label="Left Align">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </button>
+
+                                    <span>{{arg}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" ng-disabled="!constraintCheckToAdd.Name"
+                                ng-click="ctrl.addItemTo(constraintCheckToAdd, ctrl.selectedConstraint); constraintCheckToAdd = { Name: '', ArgList: [] }"
+                                class="btn btn-default" aria-label="Left Align">
+                            Add Check
+                        </button>
+                        <div ng-repeat="check in ctrl.selectedConstraint">
+                            <button type="button" class="btn btn-default" ng-click="ctrl.removeItemFrom(ctrl.selectedConstraint, check)" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </button>
+
+                            <span><b>Name:</b> {{check.Name}}</span>
+                            <span><b>Arguments:</b> {{check.ArgList}}</span>
+                        </div>-->
+                    </div>
+                </div>
+
+                <!-- functions -->
+                <div ng-show="ctrl.selectedConstraintProperty == 'FuncList'" class="panel panel-primary" style="width: 78%; display: inline-block; vertical-align: top; ">
+                    <div class="panel-heading">Specific Constraint Functions</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" ng-model="constraintFuncToAdd" ng-init="constraintFuncToAdd = { Name: '', Function: '' }">
+                            <div class="form-group">
+                                <label for="inputFunctionName" class="col-sm-2 control-label">Function Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="constraintFuncToAdd.Name" class="form-control" id="inputFunctionName" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputFunctionBody" class="col-sm-2 control-label">Function</label>
+                                <div class="col-sm-10">
+                                    <input type="text" ng-model="constraintFuncToAdd.Function" class="form-control" id="inputFunctionBody" placeholder="Function body">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="button" ng-disabled="!constraintFuncToAdd.Name || !constraintFuncToAdd.Function"
+                                            ng-click="ctrl.addItemTo(constraintFuncToAdd, ctrl.selectedConstraint); constraintFuncToAdd = { Name: '', Function: '' }"
+                                            class="btn btn-default" aria-label="Left Align">
+                                        Add Function
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div ng-repeat="func in ctrl.selectedConstraint">
+                            <button type="button" class="btn btn-default" ng-click="ctrl.removeItemFrom(ctrl.selectedConstraint, func)" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </button>
+
+                            <span><b>Name:</b> {{func.Name}}</span>
+                            <span><b>Function:</b> {{func.Function}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="button" ng-click="ctrl.saveCSP()" class="btn btn-default" aria-label="Left Align">Save to file</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!--<div>
+            <button type="button" ng-click="ctrl.test()" class="btn btn-default" aria-label="Left Align">Test</button>
+        </div>-->
+    </div>
+</body>
+</html>
