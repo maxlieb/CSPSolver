@@ -4,10 +4,12 @@ import copy
 from JsonLoader import JsonLoader
 from dateutil.rrule import *
 from datetime import datetime, timedelta
+import time
 import calendar
 import xml.etree.ElementTree as etree
 import os
 
+global perfIterCount
 def strToTime(str):
     return datetime.strptime(str, '%b %d %Y %H:%M')
 def strToDay(str):
@@ -118,7 +120,8 @@ class CSP(object):
 
     #region bactrack
     def BackTrack(self,Solutions, assignment, domains, forward_checking, single, max_solutions = 100):
-
+        global perfIterCount
+        perfIterCount+=1
         # Check if solution found
         if all([all(i.values()) for i in assignment.values()]):
             Solutions.append(copy.deepcopy(assignment))
@@ -252,6 +255,8 @@ class CSP(object):
                 assignment[varName][currDom.AttributeInVar] = self.getRandomValue(currDom)
         # Do up to MaxSteps iterations of the algorithm
         for _ in xrange(MaxSteps):
+            global perfIterCount
+            perfIterCount+=1
             # Check if assignment is valid
             confVarlist = self.GlobalValidate(assignment,True)
             print "Conflicts:{0}".format(len(confVarlist))
@@ -292,6 +297,8 @@ class CSP(object):
         pop = self.population(popSize)
         isSolved = False
         for _ in xrange(1000):
+            global perfIterCount
+            perfIterCount+=1
             pop = self.evolve(pop)
             for p in pop:
                 self.fitness_history.append(self.GlobalValidate(p))
@@ -493,18 +500,7 @@ class Domain(object):
         self.AttributeInVar =AttributeInVar
 
 
-global a
-#"examdata2.json"
-a = CSP("examdata.json")
-
-#alg = "BackTrack"
-#alg = "Genetic"
-#alg = "MinConflicts"
-
-result = a.solve("Genetic")
-
-
-def DispalyCalendar(result, csp):
+def DisplayCalendar(result, csp):
     if isinstance(result, list):
         result = result[randint(0, len(result) - 1)]
     start_date_str = csp.domDict.popitem()[1][0].Ranges[0][0]
@@ -549,7 +545,7 @@ def DispalyCalendar(result, csp):
     calfile.close()
     os.system("cal.html")
 
-def DispalyStyledCalendar(result,csp):
+def DisplayStyledCalendar(result,csp):
     if isinstance(result, list):
         result = result[randint(0, len(result) - 1)]
     start_date_str = csp.domDict.popitem()[1][0].Ranges[0][0]
@@ -571,7 +567,6 @@ def DispalyStyledCalendar(result,csp):
     out.write(htmldata)
     out.close()
     os.system("fullcalendar\demos\ResultCal.html")
-
 
 
 def DisplayUSMap(result):
@@ -599,72 +594,59 @@ def DisplayUSMap(result):
     tree.write('counties_new.svg')
     os.system('results.html')
 
-#DisplayUSMap(result)
-DispalyStyledCalendar(result,a)
-#DispalyCalendar(result, a)
-JsonLoader.SaveOutputData(result)
-print result
+global perfIterCount
+perfIterCount = 0
+myCSP = CSP(path="DemoInputs\ExamsShort.json")
+DisplayStyledCalendar(myCSP.solve("BackTrack"),myCSP)
 
-
-
-
-#region old
-# class var(object):
-#     def __init__(self, value):
-#         self.Value = value
+# testOutput = ""
+# BackTrackSingle = False
+# DispalyGraphicOutput = True
+# SampleCount = 1
+# for alg in ["MinConflicts"]:
+#     probCnt = 1
+#     for tst in ["examdata.json"]:
+#         r = range(SampleCount)
+#         if tst =="examdata2.json" and alg in ["Genetic", "MinConflicts"]:
+#             r = []
+#         if tst == "USAData.json" and alg == "Genetic":
+#             r= [0]
+#         for i in r:
+#             global a
+#             #"examdata2.json"
+#             a = CSP(tst)#("data.json")
 #
-# a.varDict["max"] = var(None)
-# a.varDict["adir"] = var(None)
-# a.varDict["shalom"]  = var(None)
-# a.varDict["shlomo"] = var(None)
-# a.varDict["sharon"]= var(None)
+#             #alg = "BackTrack"
+#             #alg = "Genetic"
+#             #alg = "MinConflicts"
+#             global perfIterCount
+#             perfIterCount = 0
+#             perfStartTime = time.time()
+#             if alg != "BackTrack":
+#                 result = a.solve(alg)#("Genetic")
+#             else:
+#                 result = a.solve("BackTrack",BackTrackSingle)
+#             perfEndTime = time.time()
+#             print "Execution Time (Sec) : {0}".format(perfEndTime - perfStartTime)
+#             print "Number Of Iterations : {0}".format(perfIterCount)
 #
-# # # Populate Variables
-# # a.varDict["WA"] = var(None)
-# # a.varDict["NT"] = var(None)
-# # a.varDict["Q"]  = var(None)
-# # a.varDict["SA"] = var(None)
-# # a.varDict["NSW"]= var(None)
-# # a.varDict["V"]  = var(None)
-# # a.varDict["T"]  = var(None)
-# #
-# dom = Domain(None,["1","2"],"Value")
-# a.domDict["max"] =   [dom]
-# a.domDict["adir"] =   [dom]
-# a.domDict["shalom"]  =   [dom]
-# a.domDict["shlomo"] =   [dom]
-# a.domDict["sharon"]=   [dom]
+#             if result and DispalyGraphicOutput:
+#                 if tst in ("examdata2.json","examdata.json"):
+#                     DispalyStyledCalendar(result,a)
+#                 elif tst == "USAData.json":
+#                     DisplayUSMap(result)
+#             JsonLoader.SaveOutputData(result)
+#             print result
+#             testOutput+= "Algorithm {0} ,Problem {1}, Sample {2}:\nTime (Sec): {3}\nIterations: {4}\n".format(alg, probCnt, i+1, perfEndTime - perfStartTime,perfIterCount)
+#             # print testOutput
+#             # try:
+#             #     input("Press Enter to continue...")
+#             # except Exception:
+#             #     pass
+#             global perfIterCount
+#             perfIterCount = 0
+#         testOutput+= "-----------------------------------------------------------------\n"
+#         probCnt+=1
+#     testOutput += "=================================================================\n"
 #
-#
-# # # Domains
-# # dom = Domain(None,["Red","Green","Blue"],"Color")
-# # a.domDict["WA"] =   [dom]
-# # a.domDict["NT"] =   [dom]
-# # a.domDict["Q"]  =   [dom]
-# # a.domDict["SA"] =   [dom]
-# # a.domDict["NSW"]=   [dom]
-# # a.domDict["V"]  =   [dom]
-# # a.domDict["T"]  =   [dom]
-# #
-# diffFuncList = {"Different": lambda x,y: x.Value != y.Value}
-# a.constraintDict["shalom"] = Constraint(a.varDict,"shalom",diffFuncList,{"Different":["max"]})
-# a.constraintDict["adir"] = Constraint(a.varDict,"adir",diffFuncList)
-# a.constraintDict["max"] = Constraint(a.varDict,"max",diffFuncList,{"Different":["shalom"]})
-# a.constraintDict["shlomo"] = Constraint(a.varDict,"shlomo",diffFuncList,{"Different":["sharon"]})
-# a.constraintDict["sharon"] = Constraint(a.varDict,"sharon",diffFuncList,{"Different":["shlomo"]})
-#
-#
-# # diffFuncList = {"Different": lambda x,y: x.Color!=y.Color}
-# # a.constraintDict["WA"] = Constraint(a.varDict,"WA",diffFuncList,{"Different":["NT","SA"]})
-# # a.constraintDict["NT"] = Constraint(a.varDict,"NT",diffFuncList,{"Different":["WA","SA","Q"]})
-# # a.constraintDict["Q"]  = Constraint(a.varDict,"Q",diffFuncList,{"Different":["NT","SA","NSW"]})
-# # a.constraintDict["SA"] = Constraint(a.varDict,"SA",diffFuncList,{"Different":["WA","NT","Q","NSW","V"]})
-# # a.constraintDict["NSW"]= Constraint(a.varDict,"NSW",diffFuncList,{"Different":["Q","SA","V"]})
-# # a.constraintDict["V"]  = Constraint(a.varDict,"V", diffFuncList,{"Different":["SA","NSW"]})
-# # a.constraintDict["T"]  = Constraint(a.varDict,"T", diffFuncList)
-#
-# #a.GlobalValidate()
-# result = a.solve("Genetic")
-#
-# JsonLoader.SaveOutputData(result)
-#endregion
+# print testOutput

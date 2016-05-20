@@ -164,31 +164,31 @@
 		}
 	},
 	"Constraints" : {
-	"Computer Architecture pt.2" : {
-		"FuncList" : [{
-				"Name" : "NoSameYearConcurrent",
-				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
-			}, {
-				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
-			}
-		],
-		"CheckList" : [{
-				"Name" : "NoSameYearConcurrent",
-				"ArgList" : ["*"]
-			}, {
-				"Name" : "TotalConCurrent",
-				"ArgList" : ["*"]
-			}
-		]
-	},
+		"Computer Architecture pt.2" : {
+			"FuncList" : [{
+					"Name" : "NoSameYearConcurrent",
+					"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
+				}, {
+					"Name" : "TotalConCurrent",
+					"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
+				}
+			],
+			"CheckList" : [{
+					"Name" : "NoSameYearConcurrent",
+					"ArgList" : ["*"]
+				}, {
+					"Name" : "TotalConCurrent",
+					"ArgList" : ["*"]
+				}
+			]
+		},
 	"Computer Architecture pt.1" : {
 		"FuncList" : [{
 				"Name" : "NoSameYearConcurrent",
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -206,7 +206,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -224,7 +224,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -242,7 +242,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -260,7 +260,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -278,7 +278,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -296,7 +296,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -314,7 +314,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -332,7 +332,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -350,7 +350,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -368,7 +368,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -386,7 +386,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -404,7 +404,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -422,7 +422,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -440,7 +440,7 @@
 				"Function" : "lambda x, allOthers: len([j for j in [i for i in allOthers if i['Time'] and x['Year'] == i['Year']] if abs((strToDay(j['Time']) - strToDay(x['Time'])).days) < 2])"
 			}, {
 				"Name" : "TotalConCurrent",
-				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 100 else 1"
+				"Function" : "lambda x, allOthers:  0 if len([y for y in allOthers if y['Time'] and abs((strToTime(y['Time']) - strToTime(x['Time'])).seconds /3600) <3 ]) < 5 else 1"
 			}
 		],
 		"CheckList" : [{
@@ -454,3 +454,5 @@
 	}
 }
 }
+
+
